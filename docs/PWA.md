@@ -13,12 +13,12 @@
 
 | File | Role |
 |---|---|
-| `vite.config.ts` → `VitePWA({...})` | Manifest (name, icons incl. maskable, shortcuts, theme colours), Workbox `generateSW` with `navigateFallback` for SPA routes and two runtime caches (`api-catalogue` SWR, `api-projects` network-first) |
-| `src/pwa/ServiceWorkerPrompt.tsx` | `useRegisterSW` from `virtual:pwa-register/react`; shows "new version available → Reload" (registerType `prompt`) and "ready to work offline"; checks for updates hourly |
-| `src/pwa/PwaBridge.tsx` | Bridges `online/offline`, `beforeinstallprompt`, `appinstalled` into `usePwaStore` |
-| `src/pwa/InstallButton.tsx` | Appears only when the browser offers installation |
-| `src/pwa/OfflineBanner.tsx` | Sticky banner under the app bar while offline |
-| `src/app/queryClient.ts` | Persister + `gcTime` 24 h |
+| `vite.config.js` → `VitePWA({...})` | Manifest (name, icons incl. maskable, shortcuts, theme colours), Workbox `generateSW` with `navigateFallback` for SPA routes and two runtime caches (`api-catalogue` SWR, `api-projects` network-first) |
+| `src/pwa/ServiceWorkerPrompt.jsx` | `useRegisterSW` from `virtual:pwa-register/react`; shows "new version available → Reload" (registerType `prompt`) and "ready to work offline"; checks for updates hourly |
+| `src/pwa/PwaBridge.jsx` | Bridges `online/offline`, `beforeinstallprompt`, `appinstalled` into `usePwaStore` |
+| `src/pwa/InstallButton.jsx` | Appears only when the browser offers installation |
+| `src/pwa/OfflineBanner.jsx` | Sticky banner under the app bar while offline |
+| `src/app/queryClient.js` | Persister + `gcTime` 24 h |
 | `scripts/generate-icons.mjs` | Writes `public/icons/icon-192.png`, `icon-512.png`, `icon-512-maskable.png` (pure Node, no sharp) |
 | `index.html` | `theme-color` per colour scheme, `viewport-fit=cover`, apple touch icon |
 
@@ -40,4 +40,4 @@ is editing a BOQ. Prompting lets them finish first; the hourly update check keep
 ## Deployment notes
 - Serve `dist/` with `index.html` fallback for unknown paths (SPA) **except** `/api/*`.
 - `sw.js` must be served with `Cache-Control: no-cache` so updates are detected.
-- Keep `start_url`/`scope` at `/` or adjust both in `vite.config.ts` when hosting under a sub-path.
+- Keep `start_url`/`scope` at `/` or adjust both in `vite.config.js` when hosting under a sub-path.

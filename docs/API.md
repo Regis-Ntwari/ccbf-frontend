@@ -3,7 +3,7 @@
 Base URL: `VITE_API_BASE_URL` (default `/api`). JSON everywhere. Auth: `Authorization: Bearer <token>`.
 Errors: `{ code: string, message: string, details?: unknown }` with 401 / 403 / 404 / 409 / 422 / 500.
 All shapes are defined as Zod schemas in `src/shared/api/schemas/` — **those files are the normative contract**; this
-document is the human summary. The mock in `src/mocks/handlers.ts` implements every route below.
+document is the human summary. The mock in `src/mocks/handlers.js` implements every route below.
 
 ## Auth
 | Method | Path | Body → Response |
@@ -13,8 +13,23 @@ document is the human summary. The mock in `src/mocks/handlers.ts` implements ev
 | GET | `/auth/me` | → `User` |
 | POST | `/auth/logout` | → `{ok}` |
 
-## Reference
-| GET | `/locations` | → `Location[] {id, name, province, factor}` |
+## Language of a response
+Every request carries `Accept-Language: en | rw | fr` (the UI language). All text the server generates is returned in that
+language: public configuration copy and labels, package/phase/element/class names inside estimates and BOQs, engine
+assumptions, warnings and trace labels, activity messages and error messages. Estimate ids never depend on the language
+(they hash parameters + rules version), so the same estimate can be fetched in any language. The frontend includes the
+language in its query-cache identity and re-runs route loaders when the language changes.
+
+Admin-editable text is stored as a **localized string**: `{ "en": "House", "rw": "Inzu", "fr": "Maison" }`. English is
+required; a missing translation falls back to English. `PlatformConfig` (admin) carries localized strings, `PublicConfig`
+and every other read endpoint return plain, already-resolved strings.
+
+## Reference & configuration
+| GET | `/locations` | → `Location[] {id, name, province, factor}` (enabled locations from configuration) |
+| GET | `/config` | → `PublicConfig` — branding, homepage copy, enabled typologies/finishes/extras/locations, phase names, estimate classes, languages, resolved for `Accept-Language`. No rates or shares. |
+| GET | `/admin/config` | platform admin → full `PlatformConfig` with localized strings (typologies with base rates, finish multipliers, element curves, package shares, extras allowances, locations, classes, financial defaults, workflow, languages, changelog) |
+| PUT | `/admin/config` | `{config, note}` → new immutable version (`version+1`). Every text field must be a localized string with `en`. Validates package shares sum to 100 % ±2, at least one enabled location and typology. New estimates hash the rules version into their id, so old ids stay reproducible. |
+| POST | `/admin/config/reset` | platform admin → factory defaults as a new version |
 
 ## Estimates (one engine, many views)
 | Method | Path | Body → Response | Notes |
@@ -44,6 +59,14 @@ document is the human summary. The mock in `src/mocks/handlers.ts` implements ev
 | DELETE | `/projects/:id/boq/items/:itemId/override` | reset to default |
 | POST | `/projects/:id/boq/transition` | `{status: draft\|review\|approved\|issued}`; approve/issue need the `approve_boq` capability; issue is 409 while `exportBlockedReasons` is non-empty; draft after issued bumps `version` |
 | POST | `/projects/:id/boq/export` | `{format: csv\|xlsx\|pdf}`; 409 when blocked (AC 5). Mock returns `{filename, mime, content}`; the real service should return a signed download URL (`{url}`) — adapt `boqApi.export` + `useExportBoq` |
+
+| POST | `/projects/:id/boq/items` | `{billCode, description, trade?, unit, qty, rate, wastePct?}` → `Boq` (hand-added activity, `custom: true`, 409 if issued) |
+| DELETE | `/projects/:id/boq/items/:itemId` | only `custom` items (404 otherwise) |
+| PUT | `/projects/:id/boq/adjustments` | `{overheadPct, contingencyPct, vatPct}` → `Boq`; grand total = measured + overhead + contingency(measured+overhead) + VAT(all) |
+| GET | `/boqs` | `BoqSummary[]` for the caller's visible projects (professional roles) |
+
+## Dashboard
+| GET | `/dashboard` | `Dashboard {activeProjects, totalEstimatedValue, draftEstimates, issuedBoqs, boqsInReview, blockedExports, pendingPrices, recentProjects[], valueByProject[], activity[]}` — tenant-scoped; activity entries are `{type, projectId?, projectName?, message, actor, at}` |
 
 ## Catalogue
 | Method | Path | Notes |

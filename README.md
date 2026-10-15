@@ -3,13 +3,17 @@
 > *"A construction budgeting and estimating platform: instant for clients, auditable for professionals."*
 
 This is the web / PWA frontend for the platform described in **Construction Cost & BOQ Platform – Requirements v0.1**.
-It is a React 19 + TypeScript single-page app that is installable, works offline for previously viewed data, and runs fully
+It is a React 19 single-page app written in plain JavaScript (JSX) that is installable, works offline for previously viewed data, and runs fully
 standalone against an in-browser mock backend until the real API exists.
+
+The interface follows an architectural / technical identity (charcoal, limestone, warm white, muted olive, terracotta;
+IBM Plex Sans with IBM Plex Mono for every measurement, code, rate and currency value). See
+[docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md).
 
 | Concern | Choice |
 |---|---|
-| Build | Vite 8, TypeScript 6 (strict, `noUncheckedIndexedAccess`) |
-| Routing | TanStack Router (file-based, type-safe search params, auth guards) |
+| Build | Vite 8, plain JavaScript/JSX (`jsconfig.json` for the `@/` alias), Prettier |
+| Routing | TanStack Router (file-based, Zod-validated search params, auth guards, per-route `head` titles) |
 | Server state | TanStack Query (+ localStorage persistence for offline reads) |
 | Tables | TanStack Table v9 (headless) rendered with MUI Table |
 | Forms | TanStack Form + Zod (Standard Schema validators) |
@@ -36,8 +40,8 @@ Other scripts:
 ```bash
 npm run build       # typecheck + production build (dist/, includes service worker + manifest)
 npm run preview     # serve the production build (needed to test the PWA / service worker)
-npm run typecheck   # tsc only
-npm run lint        # eslint (typescript-eslint + react-hooks + react-refresh)
+npm run format      # prettier --write .
+npm run lint        # eslint (js recommended + react-hooks + react-refresh)
 npm test            # vitest run
 npm run icons       # regenerate public/icons/*.png
 ```
@@ -48,17 +52,21 @@ User journeys from Section 3 of the requirements:
 
 | Journey | Route | Notes |
 |---|---|---|
-| J1 Client forward estimate | `/` → `/estimate/new` → `/estimate/$estimateId` | Free-text parser (rules-based in mock) or tiles → progressive questionnaire (10 steps, max 3 essentials asked when prefilled) → result page with range, cost/m², phase chart, 4 quality options, what-if sliders, cash-flow S-curve, assumptions, warnings, "why this number?" trace drawer |
+| J1 Client forward estimate | `/` (public, no sidebar) → `/estimate/$estimateId` | Four-step estimator on the homepage (describe-it parser or tiles → site & size → finish & extras → inline result). Saving requires sign-in: the visitor is sent to `/login` and returned to the estimate with the save dialog open. The full 10-step questionnaire at `/estimate/new` refines to Level 2. Result page: range, cost/m², phase chart, 4 quality options, what-if sliders, cash-flow S-curve, assumptions, warnings, "why this number?" trace drawer |
 | J2 Reverse budget | `/budget` | 2–4 diverse options solved by bisection and re-validated by the forward engine (±1 %), each becomes a forward estimate |
 | J3 How far can I get | `/reach` | Stage bar (complete / partial / unfunded), cost of the next 25 %, shortfall |
 | J4 Partially built | `/cost-to-complete` | Progress per phase + spend → value of work done, variance, remaining range, forecast, shortfall |
 | J5 Architect | `/projects/$projectId?tab=scenarios` | Save what-if scenarios, compare tray (up to 4), promote Level 1 → 2 |
-| J6 QS / Contractor | `/projects/$projectId?tab=boq` (Professional mode) | Editable BOQ: quantity source badges, waste, rate provenance (source/date/confidence/stale), overrides with mandatory reason + author, trace per item, draft → review → approved → issued workflow with revisions, Excel/PDF/CSV export blocked by stale or missing prices |
-| J7 Admin | `/admin/submissions`, `/admin/prices` | Submission queue, anomaly flags (>25 % deviation), approve/reject publishing a new price version, price database with provenance |
+| J6 QS / Contractor | `/boq` → `/projects/$projectId?tab=boq` (Professional mode) | Estimation workspace: project information rail, work sections with subtotals, technical activity table (quantity source, waste, rate provenance, overrides with mandatory reason + author, trace per item), **add activities by hand**, **overhead / contingency / VAT adjustments**, draft → review → approved → issued workflow with revisions, Excel/PDF/CSV export blocked by stale or missing prices |
+| J7 Admin | `/admin/submissions`, `/materials` | Submission queue, anomaly flags (>25 % deviation), approve/reject publishing a new price version; Materials & Resources price database with provenance (read + submit for all professionals) |
+| Platform configuration | `/admin/settings` | Platform admin edits branding, homepage content, building types & base rates, finishes & element curves, packages & phases, extras, locations, estimate classes & financial defaults, workflow rules and languages; publishes versioned rule sets that the engine and public pages read live |
+| Overview | `/overview` | Signed-in landing: active projects, total estimated value, drafts, issued BOQs, recently modified projects, value by project, outstanding tasks, recent activity |
+| Reports | `/reports`, `/reports/$projectId?type=client\|qs` | Printable client and QS reports recording estimate, engine and price-snapshot versions |
 
-Cross-cutting: estimate class badge on every cost (Level 1 is **never** labelled as a BOQ), client/professional/enterprise
-mode switch, role-based navigation and route guards (Section 2 permissions matrix), three languages, dark mode, offline
-support, install prompt, update prompt.
+Cross-cutting: content fills the viewport at every width; two shells (public without sidebar; workspace with structured sidebar, breadcrumbs and contextual page
+actions once signed in), estimate class badge on every cost (Level 1 is **never** labelled as a BOQ),
+client/professional/enterprise mode switch, role-based navigation and route guards (Section 2 permissions matrix), three
+languages, charcoal/graphite dark mode, offline support, install prompt, update prompt.
 
 ## Documentation
 

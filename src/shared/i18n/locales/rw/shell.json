@@ -1,0 +1,108 @@
+{
+  "shell": {
+    "nav": {
+      "costEstimation": "Kugereranya ibiciro",
+      "professional": "Abanyamwuga",
+      "administration": "Ubuyobozi",
+      "personalWorkspace": "Umwanya wawe bwite",
+      "openNav": "Fungura urutonde rw'amapaji",
+      "language": "Ururimi",
+      "toggleTheme": "Hindura isura",
+      "account": "Konti",
+      "breadcrumb": "Inzira y'ipaji"
+    },
+    "close": "Funga",
+    "confirm": "Emeza",
+    "unknownError": "Ikosa ritazwi",
+    "mostLikely": "Bishoboka cyane",
+    "notFound": {
+      "eyebrow": "Ikosa · Ntibibonetse",
+      "title": "Nta kintu kiri kuri iyi aderesi.",
+      "body": "Ipaji ishobora kuba yarimuwe, cyangwa umurongo wakurikiye wanditswe nabi.",
+      "backHome": "Subira ahabanza",
+      "goBack": "Subira inyuma",
+      "orTry": "Cyangwa ugerageze kimwe muri ibi",
+      "startEstimate": "Tangira igereranya"
+    },
+    "trace": {
+      "inputs": "Ibyinjijwe",
+      "waste": "Igipimo cy'ibitakara",
+      "priceRecord": "Inyandiko y'igiciro",
+      "confidence": "icyizere: {{level}}",
+      "confidenceHigh": "kinini",
+      "confidenceMedium": "giciriritse",
+      "confidenceLow": "gito",
+      "verified": "byemejwe",
+      "unverified": "bitaremezwa",
+      "lastUpdated": "Byavuguruwe bwa nyuma {{date}} na {{author}}",
+      "madeOf": "Bigizwe na"
+    },
+    "estimateClass": {
+      "label": {
+        "1": "Ingengo y'imari igereranyije",
+        "2": "Igereranya ribanza",
+        "3": "Igereranya ryo mu cyiciro cy'igishushanyo",
+        "4": "BOQ y'umwuga (itaremezwa kugeza ishyizweho umukono)",
+        "5": "BOQ y'ipiganwa"
+      },
+      "desc": {
+        "1": "Urwego rw'igitekerezo: ubuso, ubwoko, ubwiza n'aho biherereye gusa. Tegereza ±15 %.",
+        "2": "Ibanziriza: ibyumba, amagorofa, ibiranga inzu n'ikibanza birazwi. Tegereza ±10 %.",
+        "3": "Icyiciro cy'igishushanyo: ibishushanyo n'ibisobanuro. Tegereza ±7 %.",
+        "4": "Ingano zapimwe ku bishushanyo. Tegereza ±4 %. Ntibyemewe kugeza bishyizweho umukono.",
+        "5": "Ibishushanyo n'ibisobanuro byo ku rwego rw'ipiganwa."
+      }
+    },
+    "wordmark": {
+      "estimating": "Igereranya"
+    },
+    "pwa": {
+      "offlineReady": "Byiteguye gukora nta murandasi."
+    },
+    "settings": {
+      "appearance": "Isura n'ururimi",
+      "language": "Ururimi",
+      "theme": "Isura",
+      "themeSystem": "Iya sisitemu",
+      "themeLight": "Yakeye",
+      "themeDark": "Yijimye",
+      "modeHint": "Uburyo bw'umukiriya buhisha ibiciro, umusaruro, ibitakara n'ibyo gutangira. Uburyo bw'umwuga bwerekana byose hamwe n'inkomoko y'imibare.",
+      "account": "Konti",
+      "notSignedIn": "Ntabwo winjiye. Igereranya riracyakora; injira kugira ngo ubike imishinga.",
+      "offlineApp": "Nta murandasi na porogaramu",
+      "online": "Ku murandasi",
+      "offline": "Nta murandasi",
+      "installed": "Yashyizweho nka porogaramu",
+      "inBrowser": "Ikora muri mushakisha",
+      "mockBackend": "Seriveri y'igerageza (muri mushakisha)",
+      "liveApi": "API nyayo",
+      "clearCache": "Siba amakuru yabitswe",
+      "resetDemo": "Subizaho amakuru y'icyitegererezo",
+      "versionLine": "Moteri {{engine}} · iboneza v{{config}} · ifoto y'ibiciro {{snapshot}} · porogaramu {{app}}"
+    },
+    "login": {
+      "intro": "Tuzakoherereza kode ikoreshwa rimwe kuri imeyili cyangwa telefoni yawe. Nta jambo ry'ibanga rikenewe.",
+      "identifier": "Imeyili cyangwa telefoni",
+      "sendCode": "Ohereza kode",
+      "demoAccounts": "Konti z'icyitegererezo (kode 123456):",
+      "codeSent": "Kode yoherejwe kuri {{identifier}}.",
+      "codeLabel": "Kode y'imibare 6",
+      "verify": "Emeza winjire"
+    },
+    "roles": {
+      "client": "Umukiriya / nyir'inyubako",
+      "architect": "Arishitegiti",
+      "engineer": "Injeniyeri",
+      "qs": "Umubaruzi w'ingano (QS)",
+      "contractor": "Rwiyemezamirimo",
+      "pm": "Umuyobozi w'umushinga",
+      "supplier": "Utanga ibikoresho",
+      "company_admin": "Umuyobozi w'ikigo",
+      "platform_admin": "Umuyobozi w'urubuga"
+    },
+    "grants": {
+      "approve_boq": "kwemeza BOQ",
+      "edit_company_rates": "guhindura ibiciro by'ikigo"
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "admin": {
+    "i18n": {
+      "provided": "renseigné",
+      "missing": "manquant (anglais affiché)"
+    },
+    "home": {
+      "title": "Administration",
+      "subtitle": "La qualité des données est le produit. Gardez le catalogue à jour et chaque chiffre traçable.",
+      "submissions": {
+        "title": "Prix soumis",
+        "text": "Vérifiez, approuvez ou rejetez les prix soumis. Les anomalies sont signalées automatiquement."
+      },
+      "materials": {
+        "title": "Matériaux et ressources",
+        "text": "Matériaux, main-d'œuvre et matériel avec source, date, confiance et statut de vérification."
+      },
+      "settings": {
+        "title": "Configuration de la plateforme",
+        "text": "Image de marque, contenu de la page d'accueil, types de bâtiments et taux de base, finitions, lots, options, localités, classes d'estimation, paramètres financiers, flux de travail et langues. Versionné."
+      }
+    },
+    "prices": {
+      "eyebrow": "Catalogue",
+      "title": "Matériaux et ressources",
+      "subtitle": "Prix approuvés des matériaux, de la main-d'œuvre et du matériel avec source, date et confiance. Périmé = plus de 90 jours. Soumettez un prix pour proposer une mise à jour ; les administrateurs de la plateforme vérifient et publient.",
+      "submit": "Soumettre un prix",
+      "searchPlaceholder": "Rechercher un matériau ou un ID",
+      "category": "Catégorie",
+      "all": "Toutes",
+      "material": "Matériau",
+      "price": "Prix (RWF)",
+      "location": "Localité",
+      "source": "Source",
+      "sourcePlaceholder": "Fournisseur, devis, reçu…",
+      "date": "Date",
+      "send": "Soumettre",
+      "checkInputs": "Vérifiez les champs saisis"
+    },
+    "table": {
+      "id": "ID",
+      "material": "Matériau",
+      "category": "Catégorie",
+      "quality": "Qualité",
+      "price": "Prix",
+      "waste": "Pertes",
+      "location": "Localité",
+      "sourceDate": "Source / date",
+      "stale": "périmé",
+      "confidence": "Confiance",
+      "vsCurrent": "vs actuel",
+      "status": "Statut",
+      "noRecords": "Aucun enregistrement",
+      "confidenceValue": {
+        "high": "élevée",
+        "medium": "moyenne",
+        "low": "faible"
+      },
+      "statusValue": {
+        "pending": "en attente",
+        "approved": "approuvé",
+        "rejected": "rejeté",
+        "flagged": "signalé"
+      }
+    },
+    "submissions": {
+      "title": "Prix soumis",
+      "subtitle": "Approuver un prix publie une nouvelle version et remplace l'enregistrement approuvé actuel pour ce matériau et cette localité.",
+      "approve": "Approuver",
+      "reject": "Rejeter",
+      "pending": "En attente",
+      "flagged": "Anomalies signalées",
+      "rejected": "Rejetés",
+      "flaggedHint": "Les prix signalés s'écartent de plus de 25 % du prix approuvé actuel. Vérifiez auprès d'une seconde source avant d'approuver."
+    },
+    "config": {
+      "removeRow": "Supprimer la ligne"
+    },
+    "settings": {
+      "tabs": {
+        "branding": "Image de marque",
+        "homepage": "Page d'accueil",
+        "typologies": "Types de bâtiments et taux",
+        "finishes": "Finitions et éléments",
+        "packages": "Lots et phases",
+        "extras": "Options",
+        "locations": "Localités",
+        "classes": "Classes et finances",
+        "workflow": "Flux de travail",
+        "localization": "Langues",
+        "history": "Historique"
+      },
+      "eyebrow": "Configuration v{{version}} · publiée le {{date}} par {{by}}",
+      "title": "Configuration de la plateforme",
+      "subtitle": "Tout ce dont dépendent le moteur, le catalogue et les pages publiques. Les changements s'appliquent aux nouvelles estimations lorsque vous publiez une version ; les identifiants d'estimation existants restent reproductibles.",
+      "unpublished": "Modifications non publiées",
+      "upToDate": "À jour",
+      "discard": "Abandonner",
+      "publishVersion": "Publier une version",
+      "contentLanguage": "Langue du contenu",
+      "contentLanguageHint": "Les champs de texte ci-dessous sont modifiés dans cette langue. Un nombre sur une langue indique combien de textes n'ont pas encore de traduction ; l'anglais est affiché aux visiteurs tant qu'elle n'existe pas.",
+      "spread": "Réparti sur le programme",
+      "common": {
+        "id": "Id",
+        "label": "Libellé",
+        "name": "Nom",
+        "title": "Titre",
+        "text": "Texte",
+        "code": "Code",
+        "enabled": "Activé",
+        "location": "Localité"
+      },
+      "branding": {
+        "title": "Image de marque",
+        "hint": "Affiché dans le logotype, le manifeste et l'en-tête de chaque rapport.",
+        "appName": "Nom de l'application",
+        "shortName": "Nom court",
+        "region": "Région",
+        "tagline": "Slogan",
+        "currency": "Devise",
+        "supportEmail": "E-mail d'assistance",
+        "footerDisclaimer": "Avertissement de pied de page"
+      },
+      "homepage": {
+        "hero": "Bandeau principal",
+        "heroHint": "La première chose qu'un visiteur lit.",
+        "eyebrow": "Surtitre",
+        "headline": "Titre principal",
+        "subheadline": "Sous-titre",
+        "primaryCta": "Appel à l'action principal",
+        "showClassesTable": "Afficher le tableau des classes d'estimation",
+        "stats": "Chiffres clés",
+        "statsHint": "Jusqu'à quatre chiffres en police mono à côté du titre.",
+        "value": "Valeur",
+        "addFigure": "Ajouter un chiffre",
+        "steps": "Comment ça marche",
+        "stepsHint": "Étapes numérotées sous l'estimateur (jusqu'à six).",
+        "addStep": "Ajouter une étape",
+        "professional": "Bandeau professionnel",
+        "professionalHint": "La section adressée aux architectes, QS et entrepreneurs.",
+        "cta": "Appel à l'action",
+        "bullets": "Puces (une par ligne, max 6) · {{lang}}",
+        "example": "Exemple chiffré",
+        "exampleHint": "L'estimation d'exemple affichée à côté du bandeau principal.",
+        "type": "Type",
+        "area": "Surface m²",
+        "floors": "Niveaux",
+        "finish": "Finition"
+      },
+      "typologies": {
+        "title": "Types de bâtiments et taux de base",
+        "hint": "Taux de construction de base par m² en finition Standard dans la localité de référence (facteur 1,00). Les types désactivés disparaissent de l'estimateur public mais les projets existants continuent de fonctionner.",
+        "baseRate": "Taux de base / m²"
+      },
+      "finishes": {
+        "title": "Niveaux de finition",
+        "hint": "Multiplicateur global appliqué à chaque élément sauf si une courbe propre à l'élément existe ci-dessous.",
+        "description": "Description (affichée aux clients)",
+        "multiplier": "Multiplicateur",
+        "curves": "Courbes propres aux éléments",
+        "curvesHint": "Éléments dont le coût ne suit pas le multiplicateur global (p. ex. la climatisation est absente en Économique).",
+        "element": "Élément",
+        "blankHint": "Laissez les quatre champs vides pour utiliser le multiplicateur global."
+      },
+      "packages": {
+        "title": "Lots de travaux",
+        "hint": "Part du coût de construction de base par lot de niveau 1 (section 5.1). La somme des parts doit faire 100 % — actuellement {{pct}} %.",
+        "sumWarning": "La somme des parts est de {{pct}} %. La publication est bloquée tant qu'elle n'atteint pas 100 % (±2).",
+        "package": "Lot",
+        "phase": "Phase",
+        "elementGroup": "Groupe d'éléments",
+        "share": "Part",
+        "phaseNames": "Noms des phases",
+        "phaseNamesHint": "Libellés de phase en langage courant affichés aux clients."
+      },
+      "extras": {
+        "title": "Options",
+        "hint": "Provisions pour les équipements optionnels. Utilisez l'un des modes : montant fixe (× facteur de localité), par chambre, % de la base, ou une majoration sur un groupe d'éléments.",
+        "on": "Actif",
+        "fixed": "Fixe",
+        "perBedroom": "Par chambre",
+        "pctOfBase": "% de la base",
+        "boostElement": "Élément majoré",
+        "boostPct": "Majoration %"
+      },
+      "locations": {
+        "title": "Localités et facteurs de prix",
+        "hint": "Facteur par rapport à la localité de référence (1,00). Les localités désactivées sont masquées des sélecteurs mais les anciens projets restent valides.",
+        "province": "Province",
+        "factor": "Facteur",
+        "add": "Ajouter une localité",
+        "newDistrict": "Nouveau district"
+      },
+      "classes": {
+        "title": "Classes d'estimation",
+        "hint": "Libellés, demi-largeur de fourchette et imprévus par classe (section 1.4). Le niveau 1 ne doit jamais se lire comme un BOQ.",
+        "level": "Niveau",
+        "range": "Fourchette ±",
+        "contingency": "Imprévus",
+        "financial": "Paramètres financiers par défaut",
+        "feesPct": "Honoraires, permis et taxes %",
+        "vatPct": "VAT %",
+        "defaultOverheadPct": "Frais généraux et bénéfice par défaut %",
+        "defaultContingencyPct": "Imprévus BOQ par défaut %",
+        "storeyFactorPct": "Coût de structure par étage supplémentaire %",
+        "slopeGentle": "Facteur de pente — douce",
+        "slopeSteep": "Facteur de pente — forte"
+      },
+      "workflow": {
+        "title": "Flux de travail et qualité des données",
+        "staleDays": "Prix périmé après (jours)",
+        "anomalyThreshold": "Seuil d'anomalie %",
+        "maxQuestions": "Nombre max. de questions essentielles",
+        "blockExport": "Bloquer l'export et l'émission du BOQ professionnel tant qu'un prix est périmé ou manquant (critère d'acceptation 5)",
+        "requireReason": "Exiger un motif pour chaque modification de quantité / prix unitaire",
+        "approveRoles": "Rôles autorisés à approuver et émettre des BOQ"
+      },
+      "localization": {
+        "title": "Langues",
+        "defaultLanguage": "Langue par défaut"
+      },
+      "history": {
+        "title": "Historique des versions",
+        "hint": "Chaque version publiée avec sa note. Les estimations enregistrent la version des règles avec laquelle elles ont été calculées.",
+        "reset": "Rétablir les valeurs d'usine"
+      },
+      "publishDialog": {
+        "title": "Publier la configuration v{{version}}",
+        "text": "Les nouvelles estimations utiliseront ces règles immédiatement. Les estimations enregistrées conservent leur version des règles et restent reproductibles.",
+        "note": "Qu'est-ce qui a changé ?",
+        "publish": "Publier"
+      },
+      "resetDialog": {
+        "title": "Rétablir les valeurs d'usine ?",
+        "text": "Tous les paramètres d'image de marque, de textes, de taux et de flux de travail reviennent aux valeurs livrées, sous forme de nouvelle version. Les versions précédentes restent dans l'historique.",
+        "confirm": "Rétablir"
+      }
+    }
+  }
+}

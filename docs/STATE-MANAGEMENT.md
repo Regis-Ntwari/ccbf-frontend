@@ -16,8 +16,8 @@ The rule: **put state in the narrowest owner that can hold it**, and never dupli
 
 ## TanStack Query conventions
 
-- **Query keys** come from the factory in `shared/api/keys.ts`. Invalidate by prefix (`['projects']`) after mutations.
-- **Query options objects** (`queryOptions(...)`) live in `features/*/api.ts` so route loaders and components share one
+- **Query keys** come from the factory in `shared/api/keys.js`. Invalidate by prefix (`['projects']`) after mutations.
+- **Query options objects** (`queryOptions(...)`) live in `features/*/api.js` so route loaders and components share one
   definition (`ensureQueryData` in loaders, `useSuspenseQuery` in components).
 - **Estimate runs are queries** keyed by params (`qk.estimateRun(params)`), because runs are idempotent. The hook also
   seeds `qk.estimate(id)` so the result page is instant after navigation.
@@ -25,7 +25,7 @@ The rule: **put state in the narrowest owner that can hold it**, and never dupli
 - **Persistence**: `PersistQueryClientProvider` with `createSyncStoragePersister` (localStorage, key `ccbf-query-cache`,
   7-day max age, only successful queries). `gcTime` is 24 h so offline users still see yesterday's results.
 - **Retries** skip 401/403/404/422; network errors retry twice.
-- A 401 from any call clears the auth store (`client.ts`), which drops the user from router context and guards redirect.
+- A 401 from any call clears the auth store (`client.js`), which drops the user from router context and guards redirect.
 
 ## Zustand conventions
 

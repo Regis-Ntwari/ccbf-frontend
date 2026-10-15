@@ -1,0 +1,108 @@
+{
+  "shell": {
+    "nav": {
+      "costEstimation": "Cost estimation",
+      "professional": "Professional",
+      "administration": "Administration",
+      "personalWorkspace": "Personal workspace",
+      "openNav": "Open navigation",
+      "language": "Language",
+      "toggleTheme": "Toggle theme",
+      "account": "Account",
+      "breadcrumb": "Breadcrumb"
+    },
+    "close": "Close",
+    "confirm": "Confirm",
+    "unknownError": "Unknown error",
+    "mostLikely": "Most likely",
+    "notFound": {
+      "eyebrow": "Error · Not found",
+      "title": "There is nothing at this address.",
+      "body": "The page may have moved, or the link you followed was mistyped.",
+      "backHome": "Back to home",
+      "goBack": "Go back",
+      "orTry": "Or try one of these",
+      "startEstimate": "Start an estimate"
+    },
+    "trace": {
+      "inputs": "Inputs",
+      "waste": "Waste allowance",
+      "priceRecord": "Price record",
+      "confidence": "confidence: {{level}}",
+      "confidenceHigh": "high",
+      "confidenceMedium": "medium",
+      "confidenceLow": "low",
+      "verified": "verified",
+      "unverified": "unverified",
+      "lastUpdated": "Last updated {{date}} by {{author}}",
+      "madeOf": "Made of"
+    },
+    "estimateClass": {
+      "label": {
+        "1": "Rough budget",
+        "2": "Preliminary estimate",
+        "3": "Design-stage estimate",
+        "4": "Professional BOQ (unverified until signed)",
+        "5": "Tender BOQ"
+      },
+      "desc": {
+        "1": "Concept level: area, type, quality and location only. Expect ±15 %.",
+        "2": "Preliminary: rooms, storeys, features and site known. Expect ±10 %.",
+        "3": "Design stage: plans and specifications. Expect ±7 %.",
+        "4": "Measured quantities from drawings. Expect ±4 %. Not valid until signed.",
+        "5": "Tender-grade drawings and specifications."
+      }
+    },
+    "wordmark": {
+      "estimating": "Estimating"
+    },
+    "pwa": {
+      "offlineReady": "Ready to work offline."
+    },
+    "settings": {
+      "appearance": "Appearance & language",
+      "language": "Language",
+      "theme": "Theme",
+      "themeSystem": "System",
+      "themeLight": "Light",
+      "themeDark": "Dark",
+      "modeHint": "Client mode hides rates, productivity, waste and preliminaries. Professional mode shows everything with traceability.",
+      "account": "Account",
+      "notSignedIn": "Not signed in. Estimates still work; sign in to save projects.",
+      "offlineApp": "Offline & app",
+      "online": "Online",
+      "offline": "Offline",
+      "installed": "Installed as app",
+      "inBrowser": "Running in browser",
+      "mockBackend": "Mock backend (in-browser)",
+      "liveApi": "Live API",
+      "clearCache": "Clear cached data",
+      "resetDemo": "Reset demo data",
+      "versionLine": "Engine {{engine}} · configuration v{{config}} · price snapshot {{snapshot}} · app {{app}}"
+    },
+    "login": {
+      "intro": "We will send a one-time code to your email or phone. No password needed.",
+      "identifier": "Email or phone",
+      "sendCode": "Send code",
+      "demoAccounts": "Demo accounts (code 123456):",
+      "codeSent": "Code sent to {{identifier}}.",
+      "codeLabel": "6-digit code",
+      "verify": "Verify & sign in"
+    },
+    "roles": {
+      "client": "Client / owner",
+      "architect": "Architect",
+      "engineer": "Engineer",
+      "qs": "Quantity surveyor",
+      "contractor": "Contractor",
+      "pm": "Project manager",
+      "supplier": "Supplier",
+      "company_admin": "Company admin",
+      "platform_admin": "Platform admin"
+    },
+    "grants": {
+      "approve_boq": "approve BOQ",
+      "edit_company_rates": "edit company rates"
+    }
+  }
+}

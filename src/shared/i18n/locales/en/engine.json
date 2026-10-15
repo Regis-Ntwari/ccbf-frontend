@@ -1,0 +1,233 @@
+{
+  "engine": {
+    "warnings": {
+      "downgradedClass": "Design-stage estimates need plans or measured quantities. Shown as a preliminary estimate.",
+      "siteUnknown": "Site slope unknown: earthworks and foundations assume a flat site (+/- 3 % of total).",
+      "stalePrice": "Porcelain tile 60×60 price is older than {{days}} days ({{materialId}}). Professional BOQ export is blocked until re-priced."
+    },
+    "trace": {
+      "base": {
+        "label": "Base construction cost (STD quality)",
+        "formula": "GFA × base rate × location factor × storey factor × slope factor",
+        "gfa": "GFA (incl. garage/office/store)",
+        "baseRate": "Base rate ({{typology}}, STD, reference location)",
+        "locationFactor": "Location factor ({{location}})",
+        "storeyFactor": "Storey factor",
+        "slopeFactor": "Slope factor",
+        "assumption": "Rules {{version}}; base rates are illustrative."
+      },
+      "pkg": {
+        "formula": "base × package share × quality multiplier",
+        "base": "Base",
+        "share": "Package share",
+        "qualityMultiplier": "Quality multiplier ({{quality}})",
+        "assumption": "Quality {{quality}} for {{element}}",
+        "priceSource": "Mock price snapshot"
+      },
+      "feature": {
+        "fixed": "fixed allowance × location factor",
+        "perBedroom": "per-bedroom allowance × max(2, bedrooms) × location factor",
+        "pctOfBase": "base × %",
+        "locationFactor": "Location factor",
+        "assumption": "Allowance (provisional sum) pending specification."
+      },
+      "phase": {
+        "label": "{{name}} ({{code}})",
+        "formula": "Σ packages in phase + pro-rata preliminaries, contingency and fees",
+        "packages": "Packages in phase",
+        "prelims": "Preliminaries share",
+        "assumption": "Preliminaries spread pro-rata over construction phases."
+      },
+      "total": {
+        "label": "Total project cost (most likely)",
+        "formula": "construction + contingency + fees & taxes",
+        "construction": "Construction cost",
+        "contingency": "Contingency ({{pct}} %)",
+        "fees": "Professional fees, permits & taxes ({{pct}} %)",
+        "range": "Range ±{{pct}} % reflects estimate class {{class}} ({{label}}).",
+        "exclusions": "Excludes land, loan interest and VAT on fees."
+      },
+      "boq": {
+        "formula": "qty × (1 + waste %) × rate",
+        "quantity": "Quantity ({{source}})",
+        "quantityFormula": "Quantity formula",
+        "waste": "Waste",
+        "rate": "Rate",
+        "override": "Override: {{reason}}",
+        "parametric": "Parametric quantity from estimate model",
+        "source": {
+          "manual": "manual",
+          "parametric": "parametric"
+        }
+      }
+    },
+    "assumptions": {
+      "rates": "Rates from price snapshot {{snapshot}} (mock, unverified); rules {{version}}.",
+      "ratesSource": "Catalogue",
+      "location": "{{location}} price factor {{factor}} vs reference location.",
+      "locationSource": "Location table",
+      "storeys": "{{count}} storey(s); frame cost +{{pct}} % per additional storey.",
+      "prelims": "Preliminaries spread pro-rata over the programme.",
+      "contingency": "Contingency {{pct}} % for class {{class}}.",
+      "fees": "Professional fees, permits and taxes {{pct}} %, shown separately from construction.",
+      "exclusions": "Excludes land purchase, finance costs, furniture and loose equipment."
+    },
+    "reverse": {
+      "compact": {
+        "title": "Compact & economical",
+        "description": "Single storey, economy finishes, maximum floor area for the money."
+      },
+      "standard": {
+        "title": "Standard family home",
+        "description": "Single storey, standard finishes, boundary wall included."
+      },
+      "twoStorey": {
+        "title": "Two-storey standard",
+        "description": "Two storeys on a smaller footprint, standard finishes."
+      },
+      "premium": {
+        "title": "Smaller but premium",
+        "description": "Premium finishes and solar on a reduced area."
+      }
+    },
+    "boq": {
+      "noReasonRequired": "No reason required",
+      "blocked": {
+        "stale": "{{code}} {{description}}: price dated {{date}}",
+        "missing": "{{code}} {{description}}: no price record"
+      },
+      "trades": {
+        "preliminaries": "Preliminaries",
+        "earthworks": "Earthworks",
+        "excavation": "Excavation",
+        "concrete": "Concrete",
+        "masonry": "Masonry",
+        "slab": "Slab",
+        "frame": "Frame",
+        "openings": "Openings",
+        "roof": "Roof",
+        "electrical": "Electrical",
+        "plumbing": "Plumbing",
+        "wetTrades": "Wet trades",
+        "finishes": "Finishes",
+        "joinery": "Joinery",
+        "sanitary": "Sanitary",
+        "external": "External",
+        "handover": "Handover"
+      },
+      "items": {
+        "i1_01": {
+          "description": "Site establishment, offices, stores, temporary utilities",
+          "formula": "5 % of construction"
+        },
+        "i2_01": { "description": "Strip topsoil 150 mm, stockpile", "formula": "footprint × 1.2" },
+        "i2_02": { "description": "Bulk cut/fill to level platform", "formula": "footprint × 0.25" },
+        "i3_01": { "description": "Excavate strip footing trenches to 1.2 m", "formula": "footing length × 0.6 × 1.2" },
+        "i3_02": { "description": "Blinding C15, 50 mm", "formula": "footing area" },
+        "i3_03": {
+          "description": "RC strip footings C25 incl. formwork and reinforcement",
+          "formula": "footing L × W × D"
+        },
+        "i3_04": { "description": "Foundation walls, 200 mm hollow blocks to DPC", "formula": "perimeter × 0.9 m" },
+        "i3_05": { "description": "Hardcore 150 mm, DPM and 125 mm ground slab", "formula": "footprint" },
+        "i4_01": {
+          "description": "RC columns C25 incl. formwork and reinforcement",
+          "formula": "count × size × height"
+        },
+        "i4_02": { "description": "RC ring beams and lintels", "formula": "span grid" },
+        "i5_01": { "description": "External walls, 200 mm hollow blocks", "formula": "perimeter × height − openings" },
+        "i5_02": { "description": "Aluminium windows, single glazed, supply and fix", "formula": "window schedule" },
+        "i5_03": { "description": "External doors, solid core, supply and fix", "formula": "door schedule" },
+        "i6_01": { "description": "Timber roof trusses and purlins", "formula": "slope-adjusted roof area" },
+        "i6_02": { "description": "Pre-painted IT4 gauge 28 sheeting", "formula": "slope-adjusted roof area" },
+        "i6_03": { "description": "Gutters and downpipes, PVC", "formula": "eaves length" },
+        "i7_01": { "description": "Internal partitions, 150 mm hollow blocks", "formula": "net wall area" },
+        "i8_01": { "description": "Conduits, boxes and wiring rough-in", "formula": "points per room" },
+        "i8_02": { "description": "Water supply and drainage rough-in", "formula": "fixture points" },
+        "i9_01": { "description": "Internal plaster 15 mm, two coats", "formula": "wall areas both sides" },
+        "i9_02": { "description": "Floor screed 40 mm", "formula": "floor area" },
+        "i10_01": { "description": "Floor tiles, supply and lay", "formula": "floor area by room" },
+        "i10_02": { "description": "Emulsion paint, 1 undercoat + 2 coats", "formula": "plaster area" },
+        "i10_03": { "description": "Gypsum ceiling incl. framing", "formula": "ceiling area" },
+        "i11_01": { "description": "Internal flush doors incl. ironmongery", "formula": "rooms" },
+        "i11_02": { "description": "Fitted kitchen units (PC sum)", "formula": "allowance" },
+        "i12_01": { "description": "Sanitary fixtures, mid-range, supply and fix", "formula": "bathroom schedule" },
+        "i12_02": { "description": "Light fittings, switches and sockets", "formula": "points" },
+        "i13_01": { "description": "Paving and surface drainage", "formula": "external paved area" },
+        "i13_02": { "description": "Boundary wall 2.1 m incl. foundation", "formula": "plot perimeter" },
+        "i14_01": { "description": "Testing, commissioning, snagging, as-built docs", "formula": "1 % of construction" }
+      }
+    },
+    "export": {
+      "item": "Item",
+      "description": "Description",
+      "unit": "Unit",
+      "qty": "Qty",
+      "rate": "Rate",
+      "amount": "Amount",
+      "bill": "Bill {{code}}",
+      "subtotal": "Subtotal bill {{code}}",
+      "measuredWork": "Measured work",
+      "contingency": "Contingency {{pct}} %",
+      "vat": "VAT {{pct}} %",
+      "grandTotal": "Grand total",
+      "note": "Mock backend exports CSV content; the real report service renders Excel/PDF asynchronously."
+    },
+    "otp": {
+      "demoCode": "Demo code: {{code}}",
+      "unknownUser": "Unknown user in demo. Try client@demo.rw (code {{code}})."
+    },
+    "errors": {
+      "estimateNotFound": "Estimate not found",
+      "unauthenticated": "Sign in to continue",
+      "projectNotFound": "Project not found",
+      "invalidCode": "Invalid code or user",
+      "figureNotFound": "No trace for this figure",
+      "suppliersCannotCreate": "Suppliers cannot create projects",
+      "professionalRequired": "Professional mode required",
+      "cannotEditQuantities": "You cannot edit quantities or rates",
+      "cannotApproveBoq": "You are not allowed to approve this BOQ",
+      "exportBlockedIssue": "Stale or missing prices block issue",
+      "exportBlockedExport": "Stale or missing prices block professional BOQ export",
+      "adminsOnly": "Admins only",
+      "unknownMaterial": "Unknown material",
+      "onlyAdminsApprovePrices": "Only platform admins approve global prices",
+      "priceNotFound": "Price not found",
+      "cannotEditBoq": "You cannot edit the BOQ",
+      "boqIssued": "Start a new revision before editing an issued BOQ",
+      "itemNotFound": "Only hand-added activities can be removed; generated items can be overridden to zero",
+      "platformAdminsOnly": "Platform admins only",
+      "sharesMustSum": "Package shares must sum to 100 % (currently {{pct}} %)",
+      "locationRequired": "At least one location must be enabled",
+      "typologyRequired": "At least one building type must be enabled",
+      "invalidInput": "Invalid input",
+      "noRoute": "No route {{method}} {{path}}"
+    },
+    "config": {
+      "resetNote": "Reset to factory defaults"
+    },
+    "activity": {
+      "projectCreatedRough": "Project created from a rough budget",
+      "projectCreatedPreliminary": "Project created from a preliminary estimate",
+      "inputsUpdated": "Estimate inputs updated",
+      "statusSet": "Status set to {{status}}",
+      "renamed": "Renamed",
+      "scenarioSaved": "Scenario “{{name}}” saved",
+      "boqOverridden": "BOQ item overridden: {{reason}}",
+      "boqTransition": "BOQ v{{version}} moved to {{status}}",
+      "priceSubmitted": "Price submitted: {{name}} at {{price}} RWF/{{unit}}",
+      "priceSubmittedFlagged": "Price submitted: {{name}} at {{price}} RWF/{{unit}} (flagged)",
+      "priceApproved": "{{name}}: approved and published",
+      "priceRejected": "{{name}}: rejected",
+      "activityAdded": "Activity added: {{description}}",
+      "adjustmentsSet": "Adjustments set: overhead {{overhead}} %, contingency {{contingency}} %, VAT {{vat}} %",
+      "configPublished": "Platform configuration v{{version}} published: {{note}}",
+      "seed": {
+        "nyarugenge": "Inputs updated: 4 storeys, generator added",
+        "kicukiro": "Promoted to Level 2 (preliminary estimate)",
+        "rebar": "Price submitted: Rebar Y12 at 1,950 RWF/kg (flagged +50 %)",
+        "musanze": "Kitchen quality set to Luxury"
+      }
+    }
+  }
+}

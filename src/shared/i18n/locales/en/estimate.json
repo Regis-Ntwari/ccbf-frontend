@@ -1,0 +1,158 @@
+{
+  "estimate": {
+    "yes": "Yes",
+    "no": "No",
+    "floors_one": "{{n}} floor",
+    "floors_other": "{{n}} floors",
+    "labels": {
+      "type": "Type",
+      "area": "Area",
+      "floorArea": "Floor area",
+      "floors": "Floors",
+      "finish": "Finish",
+      "none": "None"
+    },
+    "floorOptions": {
+      "ground": "Ground only",
+      "groundOnly": "Ground floor only",
+      "plus1": "Ground + 1",
+      "plus2": "Ground + 2",
+      "plus2More": "Ground + 2 or more"
+    },
+    "home": {
+      "exampleEyebrow": "Worked example · live",
+      "exampleSummary": "Most likely {{mid}} · {{perM2}} per m² · {{months}} months",
+      "exampleNote": "Indicative range from the current rule set. Change the inputs below for your own building.",
+      "estimatorEyebrow": "Rough budget in four steps",
+      "estimatorTitle": "Your building, your district, your finish.",
+      "estimatorHint": "No account needed. Sign in only when you want to keep the result.",
+      "howItWorks": "How it works",
+      "forProfessionals": "For professionals",
+      "tryAsClient": "Try it as a client first",
+      "classesEyebrow": "Estimate classes",
+      "classesTitle": "One engine, five levels of certainty.",
+      "classesText": "The same model powers a rough budget here and a tender BOQ in the professional workspace. The label tells you what the number is good for.",
+      "table": {
+        "level": "Level",
+        "label": "Label",
+        "accuracy": "Accuracy",
+        "contingency": "Contingency"
+      }
+    },
+    "estimator": {
+      "steps": {
+        "building": "Building",
+        "site": "Site & size",
+        "finish": "Finish",
+        "budget": "Budget"
+      },
+      "invalid": "Choose a building type and a sensible size first.",
+      "noTypology": "Pick what you want to build.",
+      "describeAria": "Describe your building",
+      "describeBtn": "Describe it",
+      "whereHowBig": "Where, and how big?",
+      "locationHelp": "District price factors relative to the reference location",
+      "bedroomsHelp": "Changing bedrooms suggests a floor area",
+      "result": "Result",
+      "fullBreakdown": "Full breakdown",
+      "refineL2": "Refine to Level 2",
+      "signInToSave": "Sign in to save",
+      "specification": "Specification",
+      "levelNote": "Level 1 · {{label}} · ±{{pct}} %. Numbers come from the estimate engine; the text parser only fills in your answers."
+    },
+    "landing": {
+      "parserNote": "English, Kinyarwanda or French. The parser only fills in your answers; every cost comes from the engine."
+    },
+    "wizardUi": {
+      "stepOf": "Step {{i}} of {{n}}",
+      "level": "Level {{n}} · {{label}}",
+      "decrease": "Decrease {{label}}",
+      "increase": "Increase {{label}}",
+      "locationHelp": "Prices vary by district (Kigali = 1.00).",
+      "gfaHelp": "Gross floor area, all floors together.",
+      "suggest": "Suggest {{m2}} m² for {{n}} bedrooms",
+      "elementsHint": "Optional. Leave on default to use your overall finish level ({{quality}}).",
+      "default": "Default"
+    },
+    "resultView": {
+      "addedToCompare": "Added to compare",
+      "linkCopied": "Link copied",
+      "construction": "Construction",
+      "contingency": "Contingency",
+      "feesTaxes": "Fees & taxes",
+      "areaValue": "Area: {{n}} m²",
+      "floorsValue": "Floors: {{n}}",
+      "applyToProject": "Apply to project",
+      "elemental": "Elemental breakdown",
+      "versions": "Engine {{engine}} · rules {{rules}} · price snapshot {{snapshot}}",
+      "table": {
+        "phase": "Phase",
+        "share": "Share",
+        "cost": "Cost",
+        "cumulative": "Cumulative",
+        "element": "Element",
+        "quality": "Quality",
+        "package": "Package",
+        "amount": "Amount",
+        "pctTotal": "% of total"
+      }
+    },
+    "budget": {
+      "subtitle": "Tell us what you can spend. We solve for the size and finish that fit, then re-check each option with the forward engine (within ±1 %).",
+      "checkInputs": "Check your inputs",
+      "yourBudget": "Your budget",
+      "ownLand": "I own land",
+      "go": "Go",
+      "solving": "Solving for what fits…",
+      "optionsFor": "Options for {{budget}}",
+      "beds": "{{n}} bed",
+      "covers": "Budget covers",
+      "revalidated": "Re-validated: {{pct}} % vs budget",
+      "choose": "Choose this",
+      "footnote": "Most-likely cost ranges are ±15 % at this level. Choosing an option turns it into a forward estimate you can refine and save."
+    },
+    "reach": {
+      "subtitle": "You own the land and have some money. See which construction stages your budget reaches and what the next step costs.",
+      "moneyNow": "Money available now",
+      "show": "Show how far I get",
+      "reaches": "Your budget reaches {{pct}} % of the build",
+      "status": {
+        "complete": "Complete",
+        "partial": "Partially funded",
+        "unfunded": "Unfunded"
+      },
+      "next25": "The next 25 % costs",
+      "stillNeeded": "Still needed to finish",
+      "budgetNote": "Budget {{budget}} · rough budget ±15 %",
+      "stagesNote": "Stages are funded in construction order. Partial stages show the funded share."
+    },
+    "complete": {
+      "subtitle": "Already building? Mark how far each phase has gone and what you have spent. We estimate the remaining cost, the forecast total and any shortfall.",
+      "spent": "Amount spent so far",
+      "totalBudget": "Total budget (optional)",
+      "progressPerPhase": "Progress per phase",
+      "progressAria": "{{phase}} progress",
+      "calculate": "Calculate",
+      "remaining": "Remaining cost",
+      "forecast": "Forecast total at completion",
+      "valueDone": "Value of work done",
+      "amountSpent": "Amount spent",
+      "variance": "Variance to date",
+      "shortfall": "Shortfall vs budget",
+      "overspent": "You have spent more than the estimated value of the work done so far. Check quantities, prices or unreported scope.",
+      "remainingByPhase": "Remaining by phase",
+      "done": "Done",
+      "remainingCol": "Remaining"
+    },
+    "compare": {
+      "empty": "Nothing to compare yet",
+      "emptyText": "Open any estimate and press “{{compare}}” to add it here (up to 4).",
+      "start": "Start an estimate",
+      "rowType": "Type · area · floors",
+      "mostLikely": "Most likely",
+      "perM2": "Per m²",
+      "clearAll": "Clear all",
+      "remove": "Remove"
+    }
+  }
+}

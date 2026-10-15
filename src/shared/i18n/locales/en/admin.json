@@ -1,0 +1,240 @@
+{
+  "admin": {
+    "i18n": {
+      "provided": "provided",
+      "missing": "missing (English shown)"
+    },
+    "home": {
+      "title": "Admin",
+      "subtitle": "Data quality is the product. Keep the catalogue current and every number traceable.",
+      "submissions": {
+        "title": "Price submissions",
+        "text": "Verify, approve or reject submitted prices. Anomalies are flagged automatically."
+      },
+      "materials": {
+        "title": "Materials & resources",
+        "text": "Materials, labour and plant with source, date, confidence and verification status."
+      },
+      "settings": {
+        "title": "Platform configuration",
+        "text": "Branding, homepage content, building types and base rates, finishes, packages, extras, locations, estimate classes, financial defaults, workflow and languages. Versioned."
+      }
+    },
+    "prices": {
+      "eyebrow": "Catalogue",
+      "title": "Materials & resources",
+      "subtitle": "Approved material, labour and plant rates with source, date and confidence. Stale = older than 90 days. Submit a price to propose an update; platform admins verify and publish.",
+      "submit": "Submit a price",
+      "searchPlaceholder": "Search material or ID",
+      "category": "Category",
+      "all": "All",
+      "material": "Material",
+      "price": "Price (RWF)",
+      "location": "Location",
+      "source": "Source",
+      "sourcePlaceholder": "Supplier, quotation, receipt…",
+      "date": "Date",
+      "send": "Submit",
+      "checkInputs": "Check inputs"
+    },
+    "table": {
+      "id": "ID",
+      "material": "Material",
+      "category": "Category",
+      "quality": "Quality",
+      "price": "Price",
+      "waste": "Waste",
+      "location": "Location",
+      "sourceDate": "Source / date",
+      "stale": "stale",
+      "confidence": "Confidence",
+      "vsCurrent": "vs current",
+      "status": "Status",
+      "noRecords": "No records",
+      "confidenceValue": {
+        "high": "high",
+        "medium": "medium",
+        "low": "low"
+      },
+      "statusValue": {
+        "pending": "pending",
+        "approved": "approved",
+        "rejected": "rejected",
+        "flagged": "flagged"
+      }
+    },
+    "submissions": {
+      "title": "Price submissions",
+      "subtitle": "Approving a price publishes a new version and supersedes the current approved record for that material and location.",
+      "approve": "Approve",
+      "reject": "Reject",
+      "pending": "Pending",
+      "flagged": "Flagged anomalies",
+      "rejected": "Rejected",
+      "flaggedHint": "Flagged prices deviate more than 25 % from the current approved price. Verify with a second source before approving."
+    },
+    "config": {
+      "removeRow": "Remove row"
+    },
+    "settings": {
+      "tabs": {
+        "branding": "Branding",
+        "homepage": "Homepage",
+        "typologies": "Building types & rates",
+        "finishes": "Finishes & elements",
+        "packages": "Packages & phases",
+        "extras": "Extras",
+        "locations": "Locations",
+        "classes": "Classes & financial",
+        "workflow": "Workflow",
+        "localization": "Languages",
+        "history": "History"
+      },
+      "eyebrow": "Configuration v{{version}} · published {{date}} by {{by}}",
+      "title": "Platform configuration",
+      "subtitle": "Everything the engine, the catalogue and the public pages depend on. Changes take effect for new estimates when you publish a version; existing estimate ids stay reproducible.",
+      "unpublished": "Unpublished changes",
+      "upToDate": "Up to date",
+      "discard": "Discard",
+      "publishVersion": "Publish version",
+      "contentLanguage": "Content language",
+      "contentLanguageHint": "Text fields below are edited in this language. A number on a language shows how many texts still lack a translation; English is shown to visitors until one exists.",
+      "spread": "Spread over programme",
+      "common": {
+        "id": "Id",
+        "label": "Label",
+        "name": "Name",
+        "title": "Title",
+        "text": "Text",
+        "code": "Code",
+        "enabled": "Enabled",
+        "location": "Location"
+      },
+      "branding": {
+        "title": "Branding",
+        "hint": "Shown in the wordmark, the manifest and every report header.",
+        "appName": "Application name",
+        "shortName": "Short name",
+        "region": "Region",
+        "tagline": "Tagline",
+        "currency": "Currency",
+        "supportEmail": "Support email",
+        "footerDisclaimer": "Footer disclaimer"
+      },
+      "homepage": {
+        "hero": "Hero",
+        "heroHint": "The first thing a visitor reads.",
+        "eyebrow": "Eyebrow",
+        "headline": "Headline",
+        "subheadline": "Sub-headline",
+        "primaryCta": "Primary call to action",
+        "showClassesTable": "Show the estimate classes table",
+        "stats": "Headline figures",
+        "statsHint": "Up to four mono figures beside the headline.",
+        "value": "Value",
+        "addFigure": "Add figure",
+        "steps": "How it works",
+        "stepsHint": "Numbered steps under the estimator (up to six).",
+        "addStep": "Add step",
+        "professional": "Professional band",
+        "professionalHint": "The section addressed to architects, QS and contractors.",
+        "cta": "Call to action",
+        "bullets": "Bullets (one per line, max 6) · {{lang}}",
+        "example": "Worked example",
+        "exampleHint": "The sample estimate rendered beside the hero.",
+        "type": "Type",
+        "area": "Area m²",
+        "floors": "Floors",
+        "finish": "Finish"
+      },
+      "typologies": {
+        "title": "Building types and base rates",
+        "hint": "Base construction rate per m² at Standard finish in the reference location (factor 1.00). Disabled types disappear from the public estimator but existing projects keep working.",
+        "baseRate": "Base rate / m²"
+      },
+      "finishes": {
+        "title": "Finish levels",
+        "hint": "Global multiplier applied to every element unless an element-specific curve exists below.",
+        "description": "Description (shown to clients)",
+        "multiplier": "Multiplier",
+        "curves": "Element-specific curves",
+        "curvesHint": "Elements whose cost does not follow the global multiplier (e.g. HVAC is absent at Economy).",
+        "element": "Element",
+        "blankHint": "Leave all four blank to use the global multiplier."
+      },
+      "packages": {
+        "title": "Work packages",
+        "hint": "Share of base construction cost per Level-1 package (Section 5.1). Shares must sum to 100 % — currently {{pct}} %.",
+        "sumWarning": "Shares sum to {{pct}} %. Publishing is blocked until they sum to 100 % (±2).",
+        "package": "Package",
+        "phase": "Phase",
+        "elementGroup": "Element group",
+        "share": "Share",
+        "phaseNames": "Phase names",
+        "phaseNamesHint": "Plain-language phase labels shown to clients."
+      },
+      "extras": {
+        "title": "Extras",
+        "hint": "Allowances for optional features. Use one of: fixed amount (× location factor), per bedroom, % of base, or a boost on one element group.",
+        "on": "On",
+        "fixed": "Fixed",
+        "perBedroom": "Per bedroom",
+        "pctOfBase": "% of base",
+        "boostElement": "Boost element",
+        "boostPct": "Boost %"
+      },
+      "locations": {
+        "title": "Locations and price factors",
+        "hint": "Factor relative to the reference location (1.00). Disabled locations are hidden from pickers but old projects still resolve.",
+        "province": "Province",
+        "factor": "Factor",
+        "add": "Add location",
+        "newDistrict": "New district"
+      },
+      "classes": {
+        "title": "Estimate classes",
+        "hint": "Labels, range half-width and contingency per class (Section 1.4). Level 1 must never read as a BOQ.",
+        "level": "Level",
+        "range": "Range ±",
+        "contingency": "Contingency",
+        "financial": "Financial defaults",
+        "feesPct": "Professional fees, permits & taxes %",
+        "vatPct": "VAT %",
+        "defaultOverheadPct": "Default overheads & profit %",
+        "defaultContingencyPct": "Default BOQ contingency %",
+        "storeyFactorPct": "Frame cost per additional storey %",
+        "slopeGentle": "Slope factor — gentle",
+        "slopeSteep": "Slope factor — steep"
+      },
+      "workflow": {
+        "title": "Workflow and data quality",
+        "staleDays": "Price stale after (days)",
+        "anomalyThreshold": "Anomaly threshold %",
+        "maxQuestions": "Max essential questions",
+        "blockExport": "Block professional BOQ export and issue while any price is stale or missing (acceptance criterion 5)",
+        "requireReason": "Require a reason for every quantity / rate override",
+        "approveRoles": "Roles that may approve and issue BOQs"
+      },
+      "localization": {
+        "title": "Languages",
+        "defaultLanguage": "Default language"
+      },
+      "history": {
+        "title": "Version history",
+        "hint": "Every published version with its note. Estimates record the rules version they were computed with.",
+        "reset": "Reset to factory defaults"
+      },
+      "publishDialog": {
+        "title": "Publish configuration v{{version}}",
+        "text": "New estimates will use these rules immediately. Saved estimates keep their rules version and stay reproducible.",
+        "note": "What changed?",
+        "publish": "Publish"
+      },
+      "resetDialog": {
+        "title": "Reset to factory defaults?",
+        "text": "All branding, copy, rates and workflow settings return to the shipped defaults as a new version. Previous versions remain in the history.",
+        "confirm": "Reset"
+      }
+    }
+  }
+}

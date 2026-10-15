@@ -6,9 +6,9 @@
 import { deflateSync } from 'node:zlib'
 import { writeFileSync, mkdirSync } from 'node:fs'
 
-const BRAND = [0x1f, 0x4e, 0x79]
-const WHITE = [0xff, 0xff, 0xff]
-const ACCENT = [0xeb, 0x68, 0x34]
+const BRAND = [0x25, 0x27, 0x24]
+const WHITE = [0xe9, 0xe5, 0xdb]
+const ACCENT = [0xb5, 0x6f, 0x50]
 
 const crcTable = new Uint32Array(256).map((_, n) => {
   let c = n

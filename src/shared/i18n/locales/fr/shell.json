@@ -1,0 +1,108 @@
+{
+  "shell": {
+    "nav": {
+      "costEstimation": "Estimation des coûts",
+      "professional": "Professionnel",
+      "administration": "Administration",
+      "personalWorkspace": "Espace personnel",
+      "openNav": "Ouvrir la navigation",
+      "language": "Langue",
+      "toggleTheme": "Changer de thème",
+      "account": "Compte",
+      "breadcrumb": "Fil d’Ariane"
+    },
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "unknownError": "Erreur inconnue",
+    "mostLikely": "Le plus probable",
+    "notFound": {
+      "eyebrow": "Erreur · Introuvable",
+      "title": "Il n’y a rien à cette adresse.",
+      "body": "La page a peut-être été déplacée, ou le lien que vous avez suivi comporte une faute de frappe.",
+      "backHome": "Retour à l’accueil",
+      "goBack": "Revenir en arrière",
+      "orTry": "Ou essayez l’une de ces pages",
+      "startEstimate": "Lancer une estimation"
+    },
+    "trace": {
+      "inputs": "Entrées",
+      "waste": "Marge de pertes",
+      "priceRecord": "Fiche de prix",
+      "confidence": "confiance : {{level}}",
+      "confidenceHigh": "élevée",
+      "confidenceMedium": "moyenne",
+      "confidenceLow": "faible",
+      "verified": "vérifié",
+      "unverified": "non vérifié",
+      "lastUpdated": "Dernière mise à jour le {{date}} par {{author}}",
+      "madeOf": "Composé de"
+    },
+    "estimateClass": {
+      "label": {
+        "1": "Budget approximatif",
+        "2": "Estimation préliminaire",
+        "3": "Estimation au stade de la conception",
+        "4": "BOQ professionnel (non vérifié avant signature)",
+        "5": "BOQ d’appel d’offres"
+      },
+      "desc": {
+        "1": "Niveau concept : surface, type, qualité et localisation uniquement. Comptez ±15 %.",
+        "2": "Préliminaire : pièces, étages, équipements et terrain connus. Comptez ±10 %.",
+        "3": "Stade de conception : plans et spécifications. Comptez ±7 %.",
+        "4": "Quantités mesurées sur les plans. Comptez ±4 %. Non valable avant signature.",
+        "5": "Plans et spécifications de niveau appel d’offres."
+      }
+    },
+    "wordmark": {
+      "estimating": "Estimation"
+    },
+    "pwa": {
+      "offlineReady": "Prêt à fonctionner hors ligne."
+    },
+    "settings": {
+      "appearance": "Apparence et langue",
+      "language": "Langue",
+      "theme": "Thème",
+      "themeSystem": "Système",
+      "themeLight": "Clair",
+      "themeDark": "Sombre",
+      "modeHint": "Le mode client masque les taux, la productivité, les pertes et les frais généraux. Le mode professionnel affiche tout, avec la traçabilité.",
+      "account": "Compte",
+      "notSignedIn": "Vous n’êtes pas connecté. Les estimations fonctionnent quand même ; connectez-vous pour enregistrer des projets.",
+      "offlineApp": "Hors ligne et application",
+      "online": "En ligne",
+      "offline": "Hors ligne",
+      "installed": "Installée comme application",
+      "inBrowser": "Exécutée dans le navigateur",
+      "mockBackend": "Backend simulé (dans le navigateur)",
+      "liveApi": "API en production",
+      "clearCache": "Vider les données en cache",
+      "resetDemo": "Réinitialiser les données de démonstration",
+      "versionLine": "Moteur {{engine}} · configuration v{{config}} · relevé de prix {{snapshot}} · application {{app}}"
+    },
+    "login": {
+      "intro": "Nous vous enverrons un code à usage unique par e-mail ou par téléphone. Aucun mot de passe n’est nécessaire.",
+      "identifier": "E-mail ou téléphone",
+      "sendCode": "Envoyer le code",
+      "demoAccounts": "Comptes de démonstration (code 123456) :",
+      "codeSent": "Code envoyé à {{identifier}}.",
+      "codeLabel": "Code à 6 chiffres",
+      "verify": "Vérifier et se connecter"
+    },
+    "roles": {
+      "client": "Client / maître d’ouvrage",
+      "architect": "Architecte",
+      "engineer": "Ingénieur",
+      "qs": "Métreur-vérificateur",
+      "contractor": "Entrepreneur",
+      "pm": "Chef de projet",
+      "supplier": "Fournisseur",
+      "company_admin": "Administrateur d’entreprise",
+      "platform_admin": "Administrateur de la plateforme"
+    },
+    "grants": {
+      "approve_boq": "approuver les BOQ",
+      "edit_company_rates": "modifier les tarifs de l’entreprise"
+    }
+  }
+}

@@ -7,7 +7,7 @@ The backend (FastAPI/NestJS modular monolith, §14.5) does not exist yet. The fr
 to design the client, professional and admin journeys, and it must be demoable offline.
 
 ## Decision
-Implement the full REST contract (`docs/API.md`) as an in-browser mock (`src/mocks/handlers.ts`) backed by a small
+Implement the full REST contract (`docs/API.md`) as an in-browser mock (`src/mocks/handlers.js`) backed by a small
 deterministic engine (`src/mocks/engine`). The API client switches on `VITE_API_MOCK`. Mock state persists to
 localStorage so the demo behaves like a real account.
 

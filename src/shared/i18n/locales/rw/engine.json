@@ -1,0 +1,275 @@
+{
+  "engine": {
+    "warnings": {
+      "downgradedClass": "Igereranya ryo mu cyiciro cy’igishushanyo risaba ibishushanyo cyangwa ingano zapimwe. Ryerekanwe nk’igereranya ry’ibanze.",
+      "siteUnknown": "Ubuhanamye bw’urubuga ntibuzwi: imirimo y’ubutaka n’imisingi bifata ko urubuga ruringaniye (+/- 3 % by’igiteranyo).",
+      "stalePrice": "Igiciro cy’amakaro ya porcelaine 60×60 kimaze iminsi irenga {{days}} ({{materialId}}). Gusohora BOQ y’umwuga birahagaritswe kugeza igiciro kivuguruwe."
+    },
+    "trace": {
+      "base": {
+        "label": "Igiciro fatizo cy’ubwubatsi (ubwiza STD)",
+        "formula": "Ubuso bwose × igiciro fatizo × impamvu y’aho biherereye × impamvu y’amagorofa × impamvu y’ubuhanamye",
+        "gfa": "Ubuso bwose (harimo garaje/ibiro/ububiko)",
+        "baseRate": "Igiciro fatizo ({{typology}}, STD, ahantu fatizo)",
+        "locationFactor": "Impamvu y’aho biherereye ({{location}})",
+        "storeyFactor": "Impamvu y’amagorofa",
+        "slopeFactor": "Impamvu y’ubuhanamye",
+        "assumption": "Amabwiriza {{version}}; ibiciro fatizo ni urugero gusa."
+      },
+      "pkg": {
+        "formula": "fatizo × umugabane w’igice × ikigwizo cy’ubwiza",
+        "base": "Fatizo",
+        "share": "Umugabane w’igice",
+        "qualityMultiplier": "Ikigwizo cy’ubwiza ({{quality}})",
+        "assumption": "Ubwiza {{quality}} kuri {{element}}",
+        "priceSource": "Ifoto y’ibiciro y’ikitegererezo"
+      },
+      "feature": {
+        "fixed": "amafaranga ateganyijwe adahinduka × impamvu y’aho biherereye",
+        "perBedroom": "amafaranga ateganyijwe ku cyumba × max(2, ibyumba) × impamvu y’aho biherereye",
+        "pctOfBase": "fatizo × %",
+        "locationFactor": "Impamvu y’aho biherereye",
+        "assumption": "Amafaranga ateganyijwe (agateganyo) ategereje ibisobanuro birambuye."
+      },
+      "phase": {
+        "label": "{{name}} ({{code}})",
+        "formula": "Σ ibice by’icyiciro + imirimo y’ibanze, ibitunguranye n’amafaranga y’abahanga bigabanyijwe ku kigereranyo",
+        "packages": "Ibice biri mu cyiciro",
+        "prelims": "Umugabane w’imirimo y’ibanze",
+        "assumption": "Imirimo y’ibanze igabanyijwe ku kigereranyo ku byiciro by’ubwubatsi."
+      },
+      "total": {
+        "label": "Igiciro cyose cy’umushinga (gishoboka cyane)",
+        "formula": "ubwubatsi + ibitunguranye + amafaranga y’abahanga n’imisoro",
+        "construction": "Igiciro cy’ubwubatsi",
+        "contingency": "Ibitunguranye ({{pct}} %)",
+        "fees": "Amafaranga y’abahanga, impushya n’imisoro ({{pct}} %)",
+        "range": "Urwego ±{{pct}} % rugaragaza icyiciro cy’igereranya {{class}} ({{label}}).",
+        "exclusions": "Hatarimo ubutaka, inyungu z’inguzanyo na TVA ku mafaranga y’abahanga."
+      },
+      "boq": {
+        "formula": "ingano × (1 + % y’igihombo) × igiciro",
+        "quantity": "Ingano ({{source}})",
+        "quantityFormula": "Uburyo bwo kubara ingano",
+        "waste": "Igihombo",
+        "rate": "Igiciro",
+        "override": "Impinduka: {{reason}}",
+        "parametric": "Ingano ibarwa n’icyitegererezo cy’igereranya",
+        "source": {
+          "manual": "yashyizwemo n’intoki",
+          "parametric": "yabazwe"
+        }
+      }
+    },
+    "assumptions": {
+      "rates": "Ibiciro biva ku ifoto y’ibiciro {{snapshot}} (ikitegererezo, kitagenzuwe); amabwiriza {{version}}.",
+      "ratesSource": "Urutonde rw’ibiciro",
+      "location": "Impamvu y’ibiciro ya {{location}}: {{factor}} ugereranyije n’ahantu fatizo.",
+      "locationSource": "Imbonerahamwe y’ahantu",
+      "storeys": "Amagorofa {{count}}; igiciro cy’inkingi +{{pct}} % kuri buri gorofa ryiyongereye.",
+      "prelims": "Imirimo y’ibanze igabanyijwe ku kigereranyo kuri gahunda yose.",
+      "contingency": "Ibitunguranye {{pct}} % ku cyiciro {{class}}.",
+      "fees": "Amafaranga y’abahanga, impushya n’imisoro {{pct}} %, byerekanwe ukwabyo bitandukanye n’ubwubatsi.",
+      "exclusions": "Hatarimo kugura ubutaka, amafaranga y’inguzanyo, ibikoresho byo mu nzu n’ibindi bikoresho byimurwa."
+    },
+    "reverse": {
+      "compact": {
+        "title": "Ntoya kandi ihendutse",
+        "description": "Igorofa rimwe, isura isanzwe, ubuso bunini bushoboka ku mafaranga."
+      },
+      "standard": {
+        "title": "Inzu isanzwe y’umuryango",
+        "description": "Igorofa rimwe, isura ihagati, harimo uruzitiro."
+      },
+      "twoStorey": {
+        "title": "Amagorofa abiri ahagati",
+        "description": "Amagorofa abiri ku butaka buto, isura ihagati."
+      },
+      "premium": {
+        "title": "Ntoya ariko yo hejuru",
+        "description": "Isura yo hejuru n’imirasire y’izuba ku buso bugabanyijwe."
+      }
+    },
+    "boq": {
+      "noReasonRequired": "Nta mpamvu isabwa",
+      "blocked": {
+        "stale": "{{code}} {{description}}: igiciro cyo ku wa {{date}}",
+        "missing": "{{code}} {{description}}: nta giciro cyanditswe"
+      },
+      "trades": {
+        "preliminaries": "Imirimo y’ibanze",
+        "earthworks": "Imirimo y’ubutaka",
+        "excavation": "Gucukura",
+        "concrete": "Beto",
+        "masonry": "Kubaka inkuta",
+        "slab": "Sima yo hasi",
+        "frame": "Inkingi",
+        "openings": "Amadirishya n’inzugi",
+        "roof": "Igisenge",
+        "electrical": "Amashanyarazi",
+        "plumbing": "Amazi n’imiyoboro",
+        "wetTrades": "Gusiga sima",
+        "finishes": "Isura",
+        "joinery": "Ububaji",
+        "sanitary": "Ibikoresho by’isuku",
+        "external": "Hanze",
+        "handover": "Gushyikiriza"
+      },
+      "items": {
+        "i1_01": {
+          "description": "Gutegura urubuga, ibiro, ububiko, amazi n’umuriro by’agateganyo",
+          "formula": "5 % by’ubwubatsi"
+        },
+        "i2_01": { "description": "Gukuraho ubutaka bwo hejuru 150 mm, kububika", "formula": "ubuso bw’inzu × 1.2" },
+        "i2_02": { "description": "Gucukura/gusiba kugira ngo urubuga ruringanire", "formula": "ubuso bw’inzu × 0.25" },
+        "i3_01": {
+          "description": "Gucukura imyobo y’imisingi kugeza kuri 1.2 m",
+          "formula": "uburebure bw’umusingi × 0.6 × 1.2"
+        },
+        "i3_02": { "description": "Beto y’isuku C15, 50 mm", "formula": "ubuso bw’imisingi" },
+        "i3_03": {
+          "description": "Imisingi ya beto ikomeye C25 harimo ibibaho n’ibyuma",
+          "formula": "umusingi L × W × D"
+        },
+        "i3_04": {
+          "description": "Inkuta z’imisingi, amatafari y’umwobo 200 mm kugeza kuri DPC",
+          "formula": "umuzenguruko × 0.9 m"
+        },
+        "i3_05": {
+          "description": "Amabuye 150 mm, pulasitiki ikumira ubushuhe na sima yo hasi 125 mm",
+          "formula": "ubuso bw’inzu"
+        },
+        "i4_01": {
+          "description": "Inkingi za beto ikomeye C25 harimo ibibaho n’ibyuma",
+          "formula": "umubare × ingano × uburebure"
+        },
+        "i4_02": { "description": "Imirongo ya beto n’ibisenge by’amadirishya", "formula": "intera z’inkingi" },
+        "i5_01": {
+          "description": "Inkuta zo hanze, amatafari y’umwobo 200 mm",
+          "formula": "umuzenguruko × uburebure − imyanya"
+        },
+        "i5_02": {
+          "description": "Amadirishya ya aluminiyumu, ikirahure kimwe, kugura no gushyiraho",
+          "formula": "urutonde rw’amadirishya"
+        },
+        "i5_03": { "description": "Inzugi zo hanze, zikomeye, kugura no gushyiraho", "formula": "urutonde rw’inzugi" },
+        "i6_01": {
+          "description": "Imbaho z’igisenge n’imigozi y’imbaho",
+          "formula": "ubuso bw’igisenge buhuje n’ubuhanamye"
+        },
+        "i6_02": {
+          "description": "Amabati IT4 gauge 28 yasizwe irangi",
+          "formula": "ubuso bw’igisenge buhuje n’ubuhanamye"
+        },
+        "i6_03": { "description": "Imiyoboro y’amazi y’imvura, PVC", "formula": "uburebure bw’impande z’igisenge" },
+        "i7_01": { "description": "Inkuta zo mu nzu, amatafari y’umwobo 150 mm", "formula": "ubuso nyakuri bw’inkuta" },
+        "i8_01": { "description": "Imiyoboro, udusanduku n’insinga z’ibanze", "formula": "ingingo kuri buri cyumba" },
+        "i8_02": { "description": "Imiyoboro y’amazi n’iy’amazi mabi y’ibanze", "formula": "ingingo z’ibikoresho" },
+        "i9_01": {
+          "description": "Gusiga sima imbere 15 mm, inshuro ebyiri",
+          "formula": "ubuso bw’inkuta impande zombi"
+        },
+        "i9_02": { "description": "Sima yo hasi 40 mm", "formula": "ubuso bwo hasi" },
+        "i10_01": {
+          "description": "Amakaro yo hasi, kugura no gushyiraho",
+          "formula": "ubuso bwo hasi kuri buri cyumba"
+        },
+        "i10_02": {
+          "description": "Irangi rya emulsion, 1 ry’ibanze + 2 ryo hejuru",
+          "formula": "ubuso bwasizwe sima"
+        },
+        "i10_03": {
+          "description": "Igisenge cyo mu nzu cya gypsum harimo imbaho zacyo",
+          "formula": "ubuso bw’igisenge cyo mu nzu"
+        },
+        "i11_01": { "description": "Inzugi zo mu nzu zisanzwe harimo ibyuma byazo", "formula": "ibyumba" },
+        "i11_02": {
+          "description": "Ibikoresho by’igikoni byashyizweho (amafaranga ateganyijwe)",
+          "formula": "amafaranga ateganyijwe"
+        },
+        "i12_01": {
+          "description": "Ibikoresho by’isuku, ibihagati, kugura no gushyiraho",
+          "formula": "urutonde rw’ubwiherero"
+        },
+        "i12_02": { "description": "Amatara, udupfundikizo n’amasoketi", "formula": "ingingo" },
+        "i13_01": { "description": "Gukarura no gutunganya amazi yo hejuru", "formula": "ubuso bwakaruwe hanze" },
+        "i13_02": { "description": "Uruzitiro 2.1 m harimo umusingi", "formula": "umuzenguruko w’ikibanza" },
+        "i14_01": {
+          "description": "Kugerageza, gutangiza, gukosora utunenge, inyandiko z’uko byubatswe",
+          "formula": "1 % by’ubwubatsi"
+        }
+      }
+    },
+    "export": {
+      "item": "Ingingo",
+      "description": "Ibisobanuro",
+      "unit": "Igipimo",
+      "qty": "Ingano",
+      "rate": "Igiciro",
+      "amount": "Amafaranga",
+      "bill": "Igice {{code}}",
+      "subtotal": "Igiteranyo cy’igice {{code}}",
+      "measuredWork": "Imirimo yapimwe",
+      "contingency": "Ibitunguranye {{pct}} %",
+      "vat": "TVA {{pct}} %",
+      "grandTotal": "Igiteranyo rusange",
+      "note": "Sisitemu y’ikitegererezo isohora CSV gusa; serivisi nyayo y’amaraporo izakora Excel/PDF nyuma."
+    },
+    "otp": {
+      "demoCode": "Kode y’icyitegererezo: {{code}}",
+      "unknownUser": "Umukoresha ntazwi mu cyitegererezo. Gerageza client@demo.rw (kode {{code}})."
+    },
+    "errors": {
+      "estimateNotFound": "Igereranya ntiribonetse",
+      "unauthenticated": "Injira kugira ngo ukomeze",
+      "projectNotFound": "Umushinga ntiwabonetse",
+      "invalidCode": "Kode cyangwa umukoresha sibyo",
+      "figureNotFound": "Nta nkomoko y’uyu mubare ibonetse",
+      "suppliersCannotCreate": "Abatanga ibikoresho ntibashobora gukora imishinga",
+      "professionalRequired": "Bisaba uburyo bw’umwuga",
+      "cannotEditQuantities": "Ntushobora guhindura ingano cyangwa ibiciro",
+      "cannotApproveBoq": "Ntabwo wemerewe kwemeza iyi BOQ",
+      "exportBlockedIssue": "Ibiciro bishaje cyangwa bibura bibuza gutanga",
+      "exportBlockedExport": "Ibiciro bishaje cyangwa bibura bibuza gusohora BOQ y’umwuga",
+      "adminsOnly": "Abayobozi gusa",
+      "unknownMaterial": "Ikikoresho ntikizwi",
+      "onlyAdminsApprovePrices": "Abayobozi b’urubuga gusa ni bo bemeza ibiciro rusange",
+      "priceNotFound": "Igiciro ntikibonetse",
+      "cannotEditBoq": "Ntushobora guhindura BOQ",
+      "boqIssued": "Tangira inyandiko nshya mbere yo guhindura BOQ yamaze gutangwa",
+      "itemNotFound": "Ibikorwa byongewemo n’intoki gusa ni byo bishobora gukurwaho; ibyabazwe bishobora gushyirwa kuri zeru",
+      "platformAdminsOnly": "Abayobozi b’urubuga gusa",
+      "sharesMustSum": "Imigabane y’ibice igomba kungana na 100 % (ubu ni {{pct}} %)",
+      "locationRequired": "Nibura ahantu hamwe hagomba gukoreshwa",
+      "typologyRequired": "Nibura ubwoko bumwe bw’inyubako bugomba gukoreshwa",
+      "invalidInput": "Ibyinjijwe sibyo",
+      "noRoute": "Nta nzira {{method}} {{path}}"
+    },
+    "config": {
+      "resetNote": "Byasubijwe ku mabwiriza y’ibanze"
+    },
+    "activity": {
+      "projectCreatedRough": "Umushinga wakozwe uhereye ku ngengo y’imari igereranyije",
+      "projectCreatedPreliminary": "Umushinga wakozwe uhereye ku igereranya ry’ibanze",
+      "inputsUpdated": "Ibyinjijwe mu igereranya byavuguruwe",
+      "statusSet": "Imiterere yashyizwe kuri {{status}}",
+      "renamed": "Yahinduriwe izina",
+      "scenarioSaved": "Uburyo “{{name}}” bwabitswe",
+      "boqOverridden": "Ingingo ya BOQ yahinduwe: {{reason}}",
+      "boqTransition": "BOQ v{{version}} yimuriwe kuri {{status}}",
+      "priceSubmitted": "Igiciro cyatanzwe: {{name}} kuri {{price}} RWF/{{unit}}",
+      "priceSubmittedFlagged": "Igiciro cyatanzwe: {{name}} kuri {{price}} RWF/{{unit}} (cyaranzwe)",
+      "priceApproved": "{{name}}: cyemejwe kandi cyatangajwe",
+      "priceRejected": "{{name}}: cyanzwe",
+      "activityAdded": "Igikorwa cyongewemo: {{description}}",
+      "adjustmentsSet": "Impinduka zashyizweho: amafaranga rusange {{overhead}} %, ibitunguranye {{contingency}} %, TVA {{vat}} %",
+      "configPublished": "Igenamiterere ry’urubuga v{{version}} ryatangajwe: {{note}}",
+      "seed": {
+        "nyarugenge": "Ibyinjijwe byavuguruwe: amagorofa 4, jenerateri yongewemo",
+        "kicukiro": "Yazamuwe ku rwego rwa 2 (igereranya ry’ibanze)",
+        "rebar": "Igiciro cyatanzwe: Ibyuma Y12 kuri 1,950 RWF/kg (cyaranzwe +50 %)",
+        "musanze": "Ubwiza bw’igikoni bwashyizwe kuri Iy’akataraboneka"
+      }
+    }
+  }
+}

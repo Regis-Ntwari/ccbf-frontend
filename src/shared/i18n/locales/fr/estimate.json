@@ -1,0 +1,158 @@
+{
+  "estimate": {
+    "yes": "Oui",
+    "no": "Non",
+    "floors_one": "{{n}} niveau",
+    "floors_other": "{{n}} niveaux",
+    "labels": {
+      "type": "Type",
+      "area": "Surface",
+      "floorArea": "Surface de plancher",
+      "floors": "Niveaux",
+      "finish": "Finition",
+      "none": "Aucune"
+    },
+    "floorOptions": {
+      "ground": "Rez-de-chaussée seul",
+      "groundOnly": "Rez-de-chaussée uniquement",
+      "plus1": "R + 1",
+      "plus2": "R + 2",
+      "plus2More": "R + 2 ou plus"
+    },
+    "home": {
+      "exampleEyebrow": "Exemple chiffré · en direct",
+      "exampleSummary": "Le plus probable {{mid}} · {{perM2}} par m² · {{months}} mois",
+      "exampleNote": "Fourchette indicative issue du jeu de règles en vigueur. Modifiez les entrées ci-dessous pour votre propre bâtiment.",
+      "estimatorEyebrow": "Un budget approximatif en quatre étapes",
+      "estimatorTitle": "Votre bâtiment, votre district, votre finition.",
+      "estimatorHint": "Aucun compte requis. Connectez-vous seulement si vous voulez conserver le résultat.",
+      "howItWorks": "Comment ça marche",
+      "forProfessionals": "Pour les professionnels",
+      "tryAsClient": "Essayez d'abord en tant que client",
+      "classesEyebrow": "Classes d'estimation",
+      "classesTitle": "Un seul moteur, cinq niveaux de certitude.",
+      "classesText": "Le même modèle produit un budget approximatif ici et un BOQ d'appel d'offres dans l'espace professionnel. L'étiquette vous indique à quoi sert le montant.",
+      "table": {
+        "level": "Niveau",
+        "label": "Étiquette",
+        "accuracy": "Précision",
+        "contingency": "Imprévus"
+      }
+    },
+    "estimator": {
+      "steps": {
+        "building": "Bâtiment",
+        "site": "Lieu et surface",
+        "finish": "Finition",
+        "budget": "Budget"
+      },
+      "invalid": "Choisissez d'abord un type de bâtiment et une surface raisonnable.",
+      "noTypology": "Choisissez ce que vous voulez construire.",
+      "describeAria": "Décrivez votre bâtiment",
+      "describeBtn": "Décrire",
+      "whereHowBig": "Où, et quelle surface ?",
+      "locationHelp": "Coefficients de prix du district par rapport au lieu de référence",
+      "bedroomsHelp": "Modifier le nombre de chambres suggère une surface de plancher",
+      "result": "Résultat",
+      "fullBreakdown": "Détail complet",
+      "refineL2": "Affiner vers le niveau 2",
+      "signInToSave": "Se connecter pour enregistrer",
+      "specification": "Spécification",
+      "levelNote": "Niveau 1 · {{label}} · ±{{pct}} %. Les montants viennent du moteur d'estimation ; l'analyseur de texte ne fait que remplir vos réponses."
+    },
+    "landing": {
+      "parserNote": "Anglais, kinyarwanda ou français. L'analyseur ne fait que remplir vos réponses ; chaque coût vient du moteur."
+    },
+    "wizardUi": {
+      "stepOf": "Étape {{i}} sur {{n}}",
+      "level": "Niveau {{n}} · {{label}}",
+      "decrease": "Diminuer {{label}}",
+      "increase": "Augmenter {{label}}",
+      "locationHelp": "Les prix varient selon le district (Kigali = 1,00).",
+      "gfaHelp": "Surface de plancher brute, tous niveaux confondus.",
+      "suggest": "Suggérer {{m2}} m² pour {{n}} chambres",
+      "elementsHint": "Facultatif. Laissez sur « par défaut » pour utiliser votre niveau de finition global ({{quality}}).",
+      "default": "Par défaut"
+    },
+    "resultView": {
+      "addedToCompare": "Ajouté à la comparaison",
+      "linkCopied": "Lien copié",
+      "construction": "Construction",
+      "contingency": "Imprévus",
+      "feesTaxes": "Honoraires et taxes",
+      "areaValue": "Surface : {{n}} m²",
+      "floorsValue": "Niveaux : {{n}}",
+      "applyToProject": "Appliquer au projet",
+      "elemental": "Répartition par élément",
+      "versions": "Moteur {{engine}} · règles {{rules}} · instantané des prix {{snapshot}}",
+      "table": {
+        "phase": "Phase",
+        "share": "Part",
+        "cost": "Coût",
+        "cumulative": "Cumul",
+        "element": "Élément",
+        "quality": "Qualité",
+        "package": "Lot",
+        "amount": "Montant",
+        "pctTotal": "% du total"
+      }
+    },
+    "budget": {
+      "subtitle": "Indiquez ce que vous pouvez dépenser. Nous déterminons la surface et la finition qui conviennent, puis revérifions chaque option avec le moteur direct (à ±1 % près).",
+      "checkInputs": "Vérifiez vos saisies",
+      "yourBudget": "Votre budget",
+      "ownLand": "Je possède un terrain",
+      "go": "Calculer",
+      "solving": "Recherche de ce qui convient…",
+      "optionsFor": "Options pour {{budget}}",
+      "beds": "{{n}} ch.",
+      "covers": "Le budget couvre",
+      "revalidated": "Revérifié : {{pct}} % par rapport au budget",
+      "choose": "Choisir cette option",
+      "footnote": "Les fourchettes de coût le plus probable sont de ±15 % à ce niveau. Choisir une option la transforme en estimation directe que vous pouvez affiner et enregistrer."
+    },
+    "reach": {
+      "subtitle": "Vous possédez le terrain et disposez d'une somme. Voyez quelles étapes de construction votre budget atteint et ce que coûte la suivante.",
+      "moneyNow": "Argent disponible maintenant",
+      "show": "Voir jusqu'où je vais",
+      "reaches": "Votre budget couvre {{pct}} % de la construction",
+      "status": {
+        "complete": "Terminée",
+        "partial": "Partiellement financée",
+        "unfunded": "Non financée"
+      },
+      "next25": "Les 25 % suivants coûtent",
+      "stillNeeded": "Reste à financer pour terminer",
+      "budgetNote": "Budget {{budget}} · budget approximatif ±15 %",
+      "stagesNote": "Les étapes sont financées dans l'ordre de construction. Les étapes partielles montrent la part financée."
+    },
+    "complete": {
+      "subtitle": "Déjà en chantier ? Indiquez l'avancement de chaque phase et ce que vous avez dépensé. Nous estimons le coût restant, le total prévisionnel et l'éventuel manque.",
+      "spent": "Montant dépensé à ce jour",
+      "totalBudget": "Budget total (facultatif)",
+      "progressPerPhase": "Avancement par phase",
+      "progressAria": "Avancement {{phase}}",
+      "calculate": "Calculer",
+      "remaining": "Coût restant",
+      "forecast": "Total prévisionnel à l'achèvement",
+      "valueDone": "Valeur des travaux réalisés",
+      "amountSpent": "Montant dépensé",
+      "variance": "Écart à ce jour",
+      "shortfall": "Manque par rapport au budget",
+      "overspent": "Vous avez dépensé plus que la valeur estimée des travaux réalisés. Vérifiez les quantités, les prix ou des travaux non déclarés.",
+      "remainingByPhase": "Reste par phase",
+      "done": "Réalisé",
+      "remainingCol": "Restant"
+    },
+    "compare": {
+      "empty": "Rien à comparer pour l'instant",
+      "emptyText": "Ouvrez une estimation et appuyez sur « {{compare}} » pour l'ajouter ici (4 au maximum).",
+      "start": "Démarrer une estimation",
+      "rowType": "Type · surface · niveaux",
+      "mostLikely": "Le plus probable",
+      "perM2": "Par m²",
+      "clearAll": "Tout effacer",
+      "remove": "Retirer"
+    }
+  }
+}

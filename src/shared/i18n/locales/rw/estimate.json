@@ -1,0 +1,158 @@
+{
+  "estimate": {
+    "yes": "Yego",
+    "no": "Oya",
+    "floors_one": "Igorofa {{n}}",
+    "floors_other": "Amagorofa {{n}}",
+    "labels": {
+      "type": "Ubwoko",
+      "area": "Ubuso",
+      "floorArea": "Ubuso bw'inzu",
+      "floors": "Amagorofa",
+      "finish": "Ubwiza",
+      "none": "Nta na kimwe"
+    },
+    "floorOptions": {
+      "ground": "Hasi gusa",
+      "groundOnly": "Igorofa yo hasi gusa",
+      "plus1": "Hasi + 1",
+      "plus2": "Hasi + 2",
+      "plus2More": "Hasi + 2 cyangwa arenga"
+    },
+    "home": {
+      "exampleEyebrow": "Urugero rubaze · ako kanya",
+      "exampleSummary": "Bishoboka cyane {{mid}} · {{perM2}} kuri m² · amezi {{months}}",
+      "exampleNote": "Igipimo cy'igereranya gishingiye ku mategeko ariho ubu. Hindura ibyo winjiza hepfo ku nzu yawe bwite.",
+      "estimatorEyebrow": "Ingengo y'imari igereranyije mu ntambwe enye",
+      "estimatorTitle": "Inzu yawe, akarere kawe, ubwiza bwawe.",
+      "estimatorHint": "Nta konti ikenewe. Injira gusa igihe ushaka kubika igisubizo.",
+      "howItWorks": "Uko bikora",
+      "forProfessionals": "Ku banyamwuga",
+      "tryAsClient": "Banza ugerageze nk'umukiriya",
+      "classesEyebrow": "Inzego z'igereranya",
+      "classesTitle": "Moteri imwe, inzego eshanu z'ukuri.",
+      "classesText": "Uburyo bumwe ni bwo bukoreshwa mu ngengo y'imari igereranyije hano no muri BOQ y'ipiganwa mu kazi k'abanyamwuga. Ikirango kikubwira icyo umubare ukwiriye.",
+      "table": {
+        "level": "Urwego",
+        "label": "Ikirango",
+        "accuracy": "Ukuri",
+        "contingency": "Ingoboka"
+      }
+    },
+    "estimator": {
+      "steps": {
+        "building": "Inyubako",
+        "site": "Ikibanza n'ingano",
+        "finish": "Ubwiza",
+        "budget": "Ingengo y'imari"
+      },
+      "invalid": "Banza uhitemo ubwoko bw'inyubako n'ingano ikwiye.",
+      "noTypology": "Hitamo icyo ushaka kubaka.",
+      "describeAria": "Sobanura inyubako yawe",
+      "describeBtn": "Yisobanure",
+      "whereHowBig": "Hehe, kandi ingana iki?",
+      "locationHelp": "Impinduka z'ibiciro by'akarere ugereranyije n'ahantu h'ifatizo",
+      "bedroomsHelp": "Guhindura ibyumba byo kuryamamo bitanga igitekerezo cy'ubuso",
+      "result": "Igisubizo",
+      "fullBreakdown": "Imbonerahamwe yuzuye",
+      "refineL2": "Nonosora ujye ku Rwego rwa 2",
+      "signInToSave": "Injira kugira ngo ubike",
+      "specification": "Ibisobanuro",
+      "levelNote": "Urwego rwa 1 · {{label}} · ±{{pct}} %. Imibare iva muri moteri y'igereranya; igikoresho gisesengura inyandiko cyuzuza gusa ibisubizo byawe."
+    },
+    "landing": {
+      "parserNote": "Icyongereza, Ikinyarwanda cyangwa Igifaransa. Igikoresho gisesengura inyandiko cyuzuza gusa ibisubizo byawe; ibiciro byose biva muri moteri."
+    },
+    "wizardUi": {
+      "stepOf": "Intambwe ya {{i}} kuri {{n}}",
+      "level": "Urwego rwa {{n}} · {{label}}",
+      "decrease": "Gabanya {{label}}",
+      "increase": "Ongera {{label}}",
+      "locationHelp": "Ibiciro biratandukana bitewe n'akarere (Kigali = 1.00).",
+      "gfaHelp": "Ubuso bwose bw'inzu, amagorofa yose hamwe.",
+      "suggest": "Gerageza {{m2}} m² ku byumba byo kuryamamo {{n}}",
+      "elementsHint": "Si itegeko. Siga ku isanzwe kugira ngo hakoreshwe urwego rw'ubwiza rusange wahisemo ({{quality}}).",
+      "default": "Isanzwe"
+    },
+    "resultView": {
+      "addedToCompare": "Byongewe mu kugereranya",
+      "linkCopied": "Umurongo wakoporowe",
+      "construction": "Ubwubatsi",
+      "contingency": "Ingoboka",
+      "feesTaxes": "Amafaranga y'abanyamwuga n'imisoro",
+      "areaValue": "Ubuso: {{n}} m²",
+      "floorsValue": "Amagorofa: {{n}}",
+      "applyToProject": "Bishyire ku mushinga",
+      "elemental": "Imbonerahamwe ku bice by'inyubako",
+      "versions": "Moteri {{engine}} · amategeko {{rules}} · ibiciro {{snapshot}}",
+      "table": {
+        "phase": "Icyiciro",
+        "share": "Umugabane",
+        "cost": "Igiciro",
+        "cumulative": "Igiteranyo kigenda cyiyongera",
+        "element": "Igice",
+        "quality": "Ubwiza",
+        "package": "Ipaki",
+        "amount": "Amafaranga",
+        "pctTotal": "% ku giteranyo"
+      }
+    },
+    "budget": {
+      "subtitle": "Tubwire amafaranga ufite. Dushakisha ingano n'ubwiza bihuye na yo, hanyuma tukongera kugenzura buri hitamo na moteri y'igereranya (mu ±1 %).",
+      "checkInputs": "Genzura ibyo winjije",
+      "yourBudget": "Ingengo y'imari yawe",
+      "ownLand": "Mfite ikibanza",
+      "go": "Tangira",
+      "solving": "Turimo gushaka ibikwiranye…",
+      "optionsFor": "Amahitamo kuri {{budget}}",
+      "beds": "Ibyumba {{n}}",
+      "covers": "Ingengo y'imari ikwira",
+      "revalidated": "Byongeye kugenzurwa: {{pct}} % ugereranyije n'ingengo y'imari",
+      "choose": "Hitamo iki",
+      "footnote": "Ibiciro bishoboka cyane biri mu ±15 % kuri uru rwego. Guhitamo bihindura ihitamo mo igereranya ushobora kunonosora no kubika."
+    },
+    "reach": {
+      "subtitle": "Ufite ikibanza n'amafaranga amwe. Reba ibyiciro by'ubwubatsi ingengo y'imari yawe igeraho n'icyo intambwe ikurikira itwara.",
+      "moneyNow": "Amafaranga ufite ubu",
+      "show": "Nyereka aho ngera",
+      "reaches": "Ingengo y'imari yawe igera kuri {{pct}} % by'ubwubatsi",
+      "status": {
+        "complete": "Byarangiye",
+        "partial": "Byahawe igice",
+        "unfunded": "Nta mafaranga"
+      },
+      "next25": "25 % ikurikira itwara",
+      "stillNeeded": "Igikenewe ngo birangire",
+      "budgetNote": "Ingengo y'imari {{budget}} · igereranya ±15 %",
+      "stagesNote": "Ibyiciro bihabwa amafaranga bikurikiranye uko ubwubatsi bugenda. Ibyiciro by'igice byerekana umugabane wahawe amafaranga."
+    },
+    "complete": {
+      "subtitle": "Watangiye kubaka? Erekana aho buri cyiciro kigeze n'ibyo wakoresheje. Tugereranya igiciro gisigaye, igiteranyo giteganyijwe n'icyabura.",
+      "spent": "Amafaranga yamaze gukoreshwa",
+      "totalBudget": "Ingengo y'imari yose (si itegeko)",
+      "progressPerPhase": "Aho buri cyiciro kigeze",
+      "progressAria": "Aho {{phase}} igeze",
+      "calculate": "Bara",
+      "remaining": "Igiciro gisigaye",
+      "forecast": "Igiteranyo giteganyijwe ku irangira",
+      "valueDone": "Agaciro k'imirimo yakozwe",
+      "amountSpent": "Amafaranga yakoreshejwe",
+      "variance": "Itandukaniro kugeza ubu",
+      "shortfall": "Icyabura ugereranyije n'ingengo y'imari",
+      "overspent": "Wakoresheje amafaranga arenze agaciro kagereranyijwe k'imirimo yakozwe. Genzura ingano, ibiciro cyangwa imirimo itatanzwe.",
+      "remainingByPhase": "Ibisigaye ku cyiciro",
+      "done": "Byakozwe",
+      "remainingCol": "Bisigaye"
+    },
+    "compare": {
+      "empty": "Nta kigereranywa kurubu",
+      "emptyText": "Fungura igereranya iryo ari ryo ryose ukande “{{compare}}” kugira ngo uryongere hano (kugeza kuri 4).",
+      "start": "Tangira igereranya",
+      "rowType": "Ubwoko · ubuso · amagorofa",
+      "mostLikely": "Bishoboka cyane",
+      "perM2": "Kuri m²",
+      "clearAll": "Siba byose",
+      "remove": "Kuramo"
+    }
+  }
+}

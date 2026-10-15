@@ -1,0 +1,240 @@
+{
+  "admin": {
+    "i18n": {
+      "provided": "yatanzwe",
+      "missing": "irabura (hagaragara icyongereza)"
+    },
+    "home": {
+      "title": "Ubuyobozi",
+      "subtitle": "Ubwiza bw'amakuru ni cyo gicuruzwa. Komeza kugezaho urutonde rw'ibikoresho kandi buri mubare ugire aho ukomoka.",
+      "submissions": {
+        "title": "Ibiciro byatanzwe",
+        "text": "Genzura, wemeze cyangwa wange ibiciro byatanzwe. Ibidasanzwe birangwa mu buryo bwikora."
+      },
+      "materials": {
+        "title": "Ibikoresho n'umutungo",
+        "text": "Ibikoresho, abakozi n'imashini hamwe n'inkomoko, itariki, icyizere n'uko byagenzuwe."
+      },
+      "settings": {
+        "title": "Igenamiterere rya porogaramu",
+        "text": "Ikirango, ibikubiye ku rupapuro rw'itangiriro, ubwoko bw'inyubako n'ibiciro fatizo, imisozo, amatsinda y'imirimo, inyongera, ahantu, ibyiciro by'igereranya, ibipimo by'imari, uburyo bw'akazi n'indimi. Bifite verisiyo."
+      }
+    },
+    "prices": {
+      "eyebrow": "Urutonde rw'ibikoresho",
+      "title": "Ibikoresho n'umutungo",
+      "subtitle": "Ibiciro byemejwe by'ibikoresho, abakozi n'imashini hamwe n'inkomoko, itariki n'icyizere. Byashaje = birenze iminsi 90. Tanga igiciro kugira ngo usabe kukivugurura; abayobozi ba porogaramu barabigenzura bakabitangaza.",
+      "submit": "Tanga igiciro",
+      "searchPlaceholder": "Shakisha igikoresho cyangwa ID",
+      "category": "Icyiciro",
+      "all": "Byose",
+      "material": "Igikoresho",
+      "price": "Igiciro (RWF)",
+      "location": "Ahantu",
+      "source": "Inkomoko",
+      "sourcePlaceholder": "Uwagurishije, igereranya, inyemezabwishyu…",
+      "date": "Itariki",
+      "send": "Ohereza",
+      "checkInputs": "Genzura ibyo wanditse"
+    },
+    "table": {
+      "id": "ID",
+      "material": "Igikoresho",
+      "category": "Icyiciro",
+      "quality": "Ubwiza",
+      "price": "Igiciro",
+      "waste": "Igihombo",
+      "location": "Ahantu",
+      "sourceDate": "Inkomoko / itariki",
+      "stale": "cyashaje",
+      "confidence": "Icyizere",
+      "vsCurrent": "ugereranyije n'ikiriho",
+      "status": "Imiterere",
+      "noRecords": "Nta nyandiko zihari",
+      "confidenceValue": {
+        "high": "hejuru",
+        "medium": "hagati",
+        "low": "hasi"
+      },
+      "statusValue": {
+        "pending": "gitegereje",
+        "approved": "cyemejwe",
+        "rejected": "cyanzwe",
+        "flagged": "cyaranzwe"
+      }
+    },
+    "submissions": {
+      "title": "Ibiciro byatanzwe",
+      "subtitle": "Kwemeza igiciro bitangaza verisiyo nshya kandi bigasimbura igiciro cyemejwe kiriho kuri icyo gikoresho n'aho giherereye.",
+      "approve": "Emeza",
+      "reject": "Anga",
+      "pending": "Bitegereje",
+      "flagged": "Ibidasanzwe byaranzwe",
+      "rejected": "Byanzwe",
+      "flaggedHint": "Ibiciro byaranzwe bitandukanye n'igiciro cyemejwe kiriho kurenza 25 %. Banza ugenzure ku yindi nkomoko mbere yo kwemeza."
+    },
+    "config": {
+      "removeRow": "Kuraho umurongo"
+    },
+    "settings": {
+      "tabs": {
+        "branding": "Ikirango",
+        "homepage": "Urupapuro rw'itangiriro",
+        "typologies": "Ubwoko bw'inyubako n'ibiciro",
+        "finishes": "Imisozo n'ibice",
+        "packages": "Amatsinda y'imirimo n'ibyiciro",
+        "extras": "Inyongera",
+        "locations": "Ahantu",
+        "classes": "Ibyiciro n'imari",
+        "workflow": "Uburyo bw'akazi",
+        "localization": "Indimi",
+        "history": "Amateka"
+      },
+      "eyebrow": "Igenamiterere v{{version}} · ryatangajwe {{date}} na {{by}}",
+      "title": "Igenamiterere rya porogaramu",
+      "subtitle": "Ibyo byose moteri, urutonde rw'ibikoresho n'impapuro rusange bishingiraho. Impinduka zikurikizwa ku igereranya rishya iyo utangaje verisiyo; indangamimerere z'igereranya zisanzwe zikomeza kuboneka uko zari ziri.",
+      "unpublished": "Impinduka zitaratangazwa",
+      "upToDate": "Biri ku gihe",
+      "discard": "Reka impinduka",
+      "publishVersion": "Tangaza verisiyo",
+      "contentLanguage": "Ururimi rw'ibikubiyemo",
+      "contentLanguageHint": "Imyanya y'inyandiko iri hano hasi ihindurirwa muri uru rurimi. Umubare uri ku rurimi werekana inyandiko zitarabona ubusobanuro; abasura babona icyongereza kugeza ubwo bubonetse.",
+      "spread": "Bigabanyijwe ku gahunda yose",
+      "common": {
+        "id": "Id",
+        "label": "Izina rigaragara",
+        "name": "Izina",
+        "title": "Umutwe",
+        "text": "Inyandiko",
+        "code": "Kode",
+        "enabled": "Byemewe",
+        "location": "Ahantu"
+      },
+      "branding": {
+        "title": "Ikirango",
+        "hint": "Kigaragara ku kirango cy'izina, kuri manifeste no ku mutwe wa buri raporo.",
+        "appName": "Izina rya porogaramu",
+        "shortName": "Izina rigufi",
+        "region": "Akarere",
+        "tagline": "Interuro ngufi",
+        "currency": "Ifaranga",
+        "supportEmail": "Imeyili y'ubufasha",
+        "footerDisclaimer": "Icyitonderwa cyo hepfo"
+      },
+      "homepage": {
+        "hero": "Igice cy'ibanze",
+        "heroHint": "Ikintu cya mbere umusuzi asoma.",
+        "eyebrow": "Umutwe muto",
+        "headline": "Umutwe w'ingenzi",
+        "subheadline": "Umutwe wungirije",
+        "primaryCta": "Buto y'ibanze yo gukora",
+        "showClassesTable": "Erekana imbonerahamwe y'ibyiciro by'igereranya",
+        "stats": "Imibare y'ingenzi",
+        "statsHint": "Imibare igera kuri ine iri iruhande rw'umutwe w'ingenzi.",
+        "value": "Agaciro",
+        "addFigure": "Ongeraho umubare",
+        "steps": "Uko bikorwa",
+        "stepsHint": "Intambwe zifite nimero munsi y'igereranya (zigera kuri esheshatu).",
+        "addStep": "Ongeraho intambwe",
+        "professional": "Igice cy'ababigize umwuga",
+        "professionalHint": "Igice kigenewe abubatsi b'inyubako, QS n'abarwubatsi.",
+        "cta": "Buto yo gukora",
+        "bullets": "Utudomo (kamwe ku murongo, ntiturenze 6) · {{lang}}",
+        "example": "Urugero rubaze",
+        "exampleHint": "Igereranya ry'urugero rigaragara iruhande rw'igice cy'ibanze.",
+        "type": "Ubwoko",
+        "area": "Ubuso m²",
+        "floors": "Amagorofa",
+        "finish": "Umusozo"
+      },
+      "typologies": {
+        "title": "Ubwoko bw'inyubako n'ibiciro fatizo",
+        "hint": "Igiciro fatizo cyo kubaka kuri m² ku musozo wa Standard mu hantu fatizo (impamvu 1.00). Ubwoko bwahagaritswe buvanwa mu igereranya rusange ariko imishinga isanzwe ikomeza gukora.",
+        "baseRate": "Igiciro fatizo / m²"
+      },
+      "finishes": {
+        "title": "Urwego rw'umusozo",
+        "hint": "Igipimo rusange gikoreshwa kuri buri gice keretse hari umurongo wihariye w'igice hano hasi.",
+        "description": "Ibisobanuro (byerekwa abakiriya)",
+        "multiplier": "Igipimo cyo kugwiza",
+        "curves": "Imirongo yihariye y'ibice",
+        "curvesHint": "Ibice ikiguzi cyabyo kidakurikiza igipimo rusange (urugero: HVAC ntiba ihari muri Economy).",
+        "element": "Igice",
+        "blankHint": "Siga uburyo bwose bune ubusa kugira ngo hakoreshwe igipimo rusange."
+      },
+      "packages": {
+        "title": "Amatsinda y'imirimo",
+        "hint": "Umugabane w'ikiguzi fatizo cyo kubaka kuri buri tsinda ry'urwego rwa 1 (Igice 5.1). Imigabane igomba kungana na 100 % — ubu ni {{pct}} %.",
+        "sumWarning": "Imigabane ingana na {{pct}} %. Gutangaza birahagaritswe kugeza igeze kuri 100 % (±2).",
+        "package": "Itsinda ry'imirimo",
+        "phase": "Icyiciro",
+        "elementGroup": "Itsinda ry'ibice",
+        "share": "Umugabane",
+        "phaseNames": "Amazina y'ibyiciro",
+        "phaseNamesHint": "Amazina y'ibyiciro mu rurimi rworoshye yerekwa abakiriya."
+      },
+      "extras": {
+        "title": "Inyongera",
+        "hint": "Amafaranga ateganyirijwe ibikorwa by'inyongera. Koresha bumwe muri ubu buryo: umubare uhamye (× impamvu y'ahantu), kuri buri cyumba cyo kuraramo, % by'ifatizo, cyangwa inyongera ku itsinda rimwe ry'ibice.",
+        "on": "Bikora",
+        "fixed": "Bihamye",
+        "perBedroom": "Kuri buri cyumba",
+        "pctOfBase": "% by'ifatizo",
+        "boostElement": "Igice cyongerwa",
+        "boostPct": "Inyongera %"
+      },
+      "locations": {
+        "title": "Ahantu n'impamvu z'ibiciro",
+        "hint": "Impamvu ugereranyije n'ahantu fatizo (1.00). Ahantu hahagaritswe ntihagaragara mu guhitamo ariko imishinga ya kera iracyakora.",
+        "province": "Intara",
+        "factor": "Impamvu",
+        "add": "Ongeraho ahantu",
+        "newDistrict": "Akarere gashya"
+      },
+      "classes": {
+        "title": "Ibyiciro by'igereranya",
+        "hint": "Amazina, kimwe cya kabiri cy'urwego n'amafaranga y'ibitunguranye kuri buri cyiciro (Igice 1.4). Urwego rwa 1 ntirugomba na rimwe gufatwa nka BOQ.",
+        "level": "Urwego",
+        "range": "Urwego ±",
+        "contingency": "Ibitunguranye",
+        "financial": "Ibipimo by'imari bisanzwe",
+        "feesPct": "Amafaranga y'ababigize umwuga, impushya n'imisoro %",
+        "vatPct": "VAT %",
+        "defaultOverheadPct": "Ibindi bikoresho n'inyungu bisanzwe %",
+        "defaultContingencyPct": "Ibitunguranye bisanzwe bya BOQ %",
+        "storeyFactorPct": "Ikiguzi cy'urusobe kuri buri igorofa ryiyongereye %",
+        "slopeGentle": "Impamvu y'umusozi — woroheje",
+        "slopeSteep": "Impamvu y'umusozi — uhanamye"
+      },
+      "workflow": {
+        "title": "Uburyo bw'akazi n'ubwiza bw'amakuru",
+        "staleDays": "Igiciro gishaza nyuma y'iminsi",
+        "anomalyThreshold": "Urugero rw'ibidasanzwe %",
+        "maxQuestions": "Umubare ntarengwa w'ibibazo by'ingenzi",
+        "blockExport": "Hagarika gusohora no gutanga BOQ y'ababigize umwuga igihe cyose hari igiciro cyashaje cyangwa kibura (ikigenderwaho cya 5)",
+        "requireReason": "Saba impamvu kuri buri mpinduka y'ingano / igiciro",
+        "approveRoles": "Inshingano zemerewe kwemeza no gutanga BOQ"
+      },
+      "localization": {
+        "title": "Indimi",
+        "defaultLanguage": "Ururimi rusanzwe"
+      },
+      "history": {
+        "title": "Amateka ya verisiyo",
+        "hint": "Buri verisiyo yatangajwe hamwe n'inyandiko yayo. Igereranya ribika verisiyo y'amategeko ryabazwe nayo.",
+        "reset": "Subiza ku biteganyijwe mbere"
+      },
+      "publishDialog": {
+        "title": "Tangaza igenamiterere v{{version}}",
+        "text": "Igereranya rishya rizahita rikoresha aya mategeko. Igereranya ryabitswe rikomeza verisiyo y'amategeko yaryo kandi rikomeza kuboneka uko ryari riri.",
+        "note": "Ni iki cyahindutse?",
+        "publish": "Tangaza"
+      },
+      "resetDialog": {
+        "title": "Subiza ku biteganyijwe mbere?",
+        "text": "Ikirango, inyandiko, ibiciro n'uburyo bw'akazi byose bisubira ku biteganyijwe mbere nka verisiyo nshya. Verisiyo zabanje zigumana mu mateka.",
+        "confirm": "Subiza"
+      }
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "engine": {
+    "warnings": {
+      "downgradedClass": "Les estimations de phase de conception nécessitent des plans ou des quantités mesurées. Affichée comme estimation préliminaire.",
+      "siteUnknown": "Pente du terrain inconnue : les terrassements et fondations supposent un terrain plat (+/- 3 % du total).",
+      "stalePrice": "Le prix du carrelage porcelaine 60×60 date de plus de {{days}} jours ({{materialId}}). L’export professionnel du BOQ est bloqué jusqu’à sa mise à jour."
+    },
+    "trace": {
+      "base": {
+        "label": "Coût de construction de base (qualité STD)",
+        "formula": "SHOB × taux de base × facteur de localisation × facteur d’étages × facteur de pente",
+        "gfa": "SHOB (incl. garage/bureau/dépôt)",
+        "baseRate": "Taux de base ({{typology}}, STD, localisation de référence)",
+        "locationFactor": "Facteur de localisation ({{location}})",
+        "storeyFactor": "Facteur d’étages",
+        "slopeFactor": "Facteur de pente",
+        "assumption": "Règles {{version}} ; les taux de base sont indicatifs."
+      },
+      "pkg": {
+        "formula": "base × part du lot × multiplicateur de qualité",
+        "base": "Base",
+        "share": "Part du lot",
+        "qualityMultiplier": "Multiplicateur de qualité ({{quality}})",
+        "assumption": "Qualité {{quality}} pour {{element}}",
+        "priceSource": "Instantané de prix fictif"
+      },
+      "feature": {
+        "fixed": "provision forfaitaire × facteur de localisation",
+        "perBedroom": "provision par chambre × max(2, chambres) × facteur de localisation",
+        "pctOfBase": "base × %",
+        "locationFactor": "Facteur de localisation",
+        "assumption": "Provision (somme provisionnelle) en attente de spécification."
+      },
+      "phase": {
+        "label": "{{name}} ({{code}})",
+        "formula": "Σ lots de la phase + installations de chantier, aléas et honoraires au prorata",
+        "packages": "Lots de la phase",
+        "prelims": "Part des installations de chantier",
+        "assumption": "Installations de chantier réparties au prorata sur les phases de construction."
+      },
+      "total": {
+        "label": "Coût total du projet (le plus probable)",
+        "formula": "construction + aléas + honoraires et taxes",
+        "construction": "Coût de construction",
+        "contingency": "Aléas ({{pct}} %)",
+        "fees": "Honoraires, permis et taxes ({{pct}} %)",
+        "range": "La fourchette ±{{pct}} % reflète la classe d’estimation {{class}} ({{label}}).",
+        "exclusions": "Hors terrain, intérêts d’emprunt et TVA sur honoraires."
+      },
+      "boq": {
+        "formula": "qté × (1 + % de perte) × prix unitaire",
+        "quantity": "Quantité ({{source}})",
+        "quantityFormula": "Formule de quantité",
+        "waste": "Perte",
+        "rate": "Prix unitaire",
+        "override": "Remplacement : {{reason}}",
+        "parametric": "Quantité paramétrique issue du modèle d’estimation",
+        "source": {
+          "manual": "manuelle",
+          "parametric": "paramétrique"
+        }
+      }
+    },
+    "assumptions": {
+      "rates": "Taux issus de l’instantané de prix {{snapshot}} (fictif, non vérifié) ; règles {{version}}.",
+      "ratesSource": "Catalogue",
+      "location": "Facteur de prix {{location}} : {{factor}} par rapport à la localisation de référence.",
+      "locationSource": "Table des localisations",
+      "storeys": "{{count}} niveau(x) ; coût de structure +{{pct}} % par niveau supplémentaire.",
+      "prelims": "Installations de chantier réparties au prorata sur le programme.",
+      "contingency": "Aléas {{pct}} % pour la classe {{class}}.",
+      "fees": "Honoraires, permis et taxes {{pct}} %, présentés séparément de la construction.",
+      "exclusions": "Hors achat du terrain, frais financiers, mobilier et équipements mobiles."
+    },
+    "reverse": {
+      "compact": {
+        "title": "Compacte et économique",
+        "description": "Plain-pied, finitions économiques, surface maximale pour le budget."
+      },
+      "standard": {
+        "title": "Maison familiale standard",
+        "description": "Plain-pied, finitions standard, clôture incluse."
+      },
+      "twoStorey": {
+        "title": "Standard à deux niveaux",
+        "description": "Deux niveaux sur une emprise réduite, finitions standard."
+      },
+      "premium": {
+        "title": "Plus petite mais premium",
+        "description": "Finitions premium et solaire sur une surface réduite."
+      }
+    },
+    "boq": {
+      "noReasonRequired": "Aucun motif requis",
+      "blocked": {
+        "stale": "{{code}} {{description}} : prix daté du {{date}}",
+        "missing": "{{code}} {{description}} : aucun prix enregistré"
+      },
+      "trades": {
+        "preliminaries": "Installations de chantier",
+        "earthworks": "Terrassements",
+        "excavation": "Fouilles",
+        "concrete": "Béton",
+        "masonry": "Maçonnerie",
+        "slab": "Dallage",
+        "frame": "Ossature",
+        "openings": "Menuiseries extérieures",
+        "roof": "Toiture",
+        "electrical": "Électricité",
+        "plumbing": "Plomberie",
+        "wetTrades": "Enduits et chapes",
+        "finishes": "Finitions",
+        "joinery": "Menuiserie",
+        "sanitary": "Sanitaires",
+        "external": "Extérieurs",
+        "handover": "Réception"
+      },
+      "items": {
+        "i1_01": {
+          "description": "Installation de chantier, bureaux, magasins, réseaux provisoires",
+          "formula": "5 % de la construction"
+        },
+        "i2_01": { "description": "Décapage de terre végétale 150 mm, mise en dépôt", "formula": "emprise × 1,2" },
+        "i2_02": { "description": "Déblais/remblais en masse pour plateforme", "formula": "emprise × 0,25" },
+        "i3_01": {
+          "description": "Fouilles en rigole pour semelles filantes à 1,2 m",
+          "formula": "longueur de semelle × 0,6 × 1,2"
+        },
+        "i3_02": { "description": "Béton de propreté C15, 50 mm", "formula": "surface des semelles" },
+        "i3_03": {
+          "description": "Semelles filantes BA C25 y c. coffrage et armatures",
+          "formula": "semelle L × l × P"
+        },
+        "i3_04": {
+          "description": "Murs de soubassement, blocs creux 200 mm jusqu’à la coupure de capillarité",
+          "formula": "périmètre × 0,9 m"
+        },
+        "i3_05": { "description": "Hérisson 150 mm, film polyane et dallage 125 mm", "formula": "emprise" },
+        "i4_01": {
+          "description": "Poteaux BA C25 y c. coffrage et armatures",
+          "formula": "nombre × section × hauteur"
+        },
+        "i4_02": { "description": "Chaînages et linteaux BA", "formula": "trame des portées" },
+        "i5_01": {
+          "description": "Murs extérieurs, blocs creux 200 mm",
+          "formula": "périmètre × hauteur − ouvertures"
+        },
+        "i5_02": {
+          "description": "Fenêtres aluminium, simple vitrage, fourniture et pose",
+          "formula": "nomenclature des fenêtres"
+        },
+        "i5_03": {
+          "description": "Portes extérieures, âme pleine, fourniture et pose",
+          "formula": "nomenclature des portes"
+        },
+        "i6_01": {
+          "description": "Fermes et pannes de toiture en bois",
+          "formula": "surface de toiture corrigée de la pente"
+        },
+        "i6_02": {
+          "description": "Tôles IT4 prépeintes, épaisseur 28",
+          "formula": "surface de toiture corrigée de la pente"
+        },
+        "i6_03": { "description": "Gouttières et descentes, PVC", "formula": "longueur d’égout" },
+        "i7_01": { "description": "Cloisons intérieures, blocs creux 150 mm", "formula": "surface nette de murs" },
+        "i8_01": { "description": "Fourreaux, boîtes et câblage en attente", "formula": "points par pièce" },
+        "i8_02": { "description": "Alimentation en eau et évacuations en attente", "formula": "points d’appareils" },
+        "i9_01": { "description": "Enduit intérieur 15 mm, deux couches", "formula": "surfaces de murs deux faces" },
+        "i9_02": { "description": "Chape de sol 40 mm", "formula": "surface de plancher" },
+        "i10_01": { "description": "Carrelage de sol, fourniture et pose", "formula": "surface de plancher par pièce" },
+        "i10_02": {
+          "description": "Peinture émulsion, 1 couche d’impression + 2 couches",
+          "formula": "surface d’enduit"
+        },
+        "i10_03": { "description": "Plafond en plaques de plâtre y c. ossature", "formula": "surface de plafond" },
+        "i11_01": { "description": "Portes intérieures isoplanes y c. quincaillerie", "formula": "pièces" },
+        "i11_02": { "description": "Meubles de cuisine équipée (somme provisionnelle)", "formula": "provision" },
+        "i12_01": {
+          "description": "Appareils sanitaires, milieu de gamme, fourniture et pose",
+          "formula": "nomenclature des salles de bains"
+        },
+        "i12_02": { "description": "Luminaires, interrupteurs et prises", "formula": "points" },
+        "i13_01": { "description": "Pavage et drainage de surface", "formula": "surface pavée extérieure" },
+        "i13_02": { "description": "Clôture 2,1 m y c. fondation", "formula": "périmètre de la parcelle" },
+        "i14_01": {
+          "description": "Essais, mise en service, levée des réserves, dossier des ouvrages exécutés",
+          "formula": "1 % de la construction"
+        }
+      }
+    },
+    "export": {
+      "item": "Poste",
+      "description": "Désignation",
+      "unit": "Unité",
+      "qty": "Qté",
+      "rate": "Prix unitaire",
+      "amount": "Montant",
+      "bill": "Lot {{code}}",
+      "subtotal": "Sous-total lot {{code}}",
+      "measuredWork": "Travaux métrés",
+      "contingency": "Aléas {{pct}} %",
+      "vat": "TVA {{pct}} %",
+      "grandTotal": "Total général",
+      "note": "Le backend fictif exporte du contenu CSV ; le véritable service de rapports génère Excel/PDF de manière asynchrone."
+    },
+    "otp": {
+      "demoCode": "Code de démonstration : {{code}}",
+      "unknownUser": "Utilisateur inconnu dans la démo. Essayez client@demo.rw (code {{code}})."
+    },
+    "errors": {
+      "estimateNotFound": "Estimation introuvable",
+      "unauthenticated": "Connectez-vous pour continuer",
+      "projectNotFound": "Projet introuvable",
+      "invalidCode": "Code ou utilisateur invalide",
+      "figureNotFound": "Aucune trace pour ce chiffre",
+      "suppliersCannotCreate": "Les fournisseurs ne peuvent pas créer de projets",
+      "professionalRequired": "Mode professionnel requis",
+      "cannotEditQuantities": "Vous ne pouvez pas modifier les quantités ni les prix",
+      "cannotApproveBoq": "Vous n’êtes pas autorisé à approuver ce BOQ",
+      "exportBlockedIssue": "Des prix périmés ou manquants bloquent l’émission",
+      "exportBlockedExport": "Des prix périmés ou manquants bloquent l’export professionnel du BOQ",
+      "adminsOnly": "Réservé aux administrateurs",
+      "unknownMaterial": "Matériau inconnu",
+      "onlyAdminsApprovePrices": "Seuls les administrateurs de la plateforme approuvent les prix globaux",
+      "priceNotFound": "Prix introuvable",
+      "cannotEditBoq": "Vous ne pouvez pas modifier le BOQ",
+      "boqIssued": "Créez une nouvelle révision avant de modifier un BOQ émis",
+      "itemNotFound": "Seules les activités ajoutées manuellement peuvent être supprimées ; les postes générés peuvent être ramenés à zéro",
+      "platformAdminsOnly": "Réservé aux administrateurs de la plateforme",
+      "sharesMustSum": "La somme des parts des lots doit faire 100 % (actuellement {{pct}} %)",
+      "locationRequired": "Au moins une localisation doit être activée",
+      "typologyRequired": "Au moins un type de bâtiment doit être activé",
+      "invalidInput": "Saisie invalide",
+      "noRoute": "Aucune route {{method}} {{path}}"
+    },
+    "config": {
+      "resetNote": "Réinitialisation aux valeurs d’usine"
+    },
+    "activity": {
+      "projectCreatedRough": "Projet créé à partir d’un budget approximatif",
+      "projectCreatedPreliminary": "Projet créé à partir d’une estimation préliminaire",
+      "inputsUpdated": "Données d’estimation mises à jour",
+      "statusSet": "Statut défini sur {{status}}",
+      "renamed": "Renommé",
+      "scenarioSaved": "Scénario « {{name}} » enregistré",
+      "boqOverridden": "Poste du BOQ remplacé : {{reason}}",
+      "boqTransition": "BOQ v{{version}} passé à {{status}}",
+      "priceSubmitted": "Prix soumis : {{name}} à {{price}} RWF/{{unit}}",
+      "priceSubmittedFlagged": "Prix soumis : {{name}} à {{price}} RWF/{{unit}} (signalé)",
+      "priceApproved": "{{name}} : approuvé et publié",
+      "priceRejected": "{{name}} : rejeté",
+      "activityAdded": "Activité ajoutée : {{description}}",
+      "adjustmentsSet": "Ajustements définis : frais généraux {{overhead}} %, aléas {{contingency}} %, TVA {{vat}} %",
+      "configPublished": "Configuration de la plateforme v{{version}} publiée : {{note}}",
+      "seed": {
+        "nyarugenge": "Données mises à jour : 4 niveaux, groupe électrogène ajouté",
+        "kicukiro": "Promu au niveau 2 (estimation préliminaire)",
+        "rebar": "Prix soumis : Fer à béton Y12 à 1 950 RWF/kg (signalé +50 %)",
+        "musanze": "Qualité de la cuisine définie sur Luxe"
+      }
+    }
+  }
+}
