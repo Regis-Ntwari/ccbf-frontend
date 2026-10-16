@@ -26,7 +26,7 @@ import Chip from '@mui/material/Chip'
 import Stack from '@mui/material/Stack'
 
 import { Money } from '@/shared/components/Money'
-import { daysSince, formatDate } from '@/shared/lib/format'
+import { daysSince, formatDate, categoryLabel, unitLabel } from '@/shared/lib/format'
 
 const features = tableFeatures({
   rowSortingFeature,
@@ -56,7 +56,7 @@ export function PriceTable({ rows, globalFilter, actions }) {
             </>
           ),
         }),
-        helper.accessor('category', { header: t('admin.table.category') }),
+        helper.accessor('category', { header: t('admin.table.category'), cell: (c) => categoryLabel(t, c.getValue()) }),
         helper.accessor('quality', {
           header: t('admin.table.quality'),
           cell: (c) => <Chip size="small" label={c.getValue()} variant="outlined" />,
@@ -67,7 +67,8 @@ export function PriceTable({ rows, globalFilter, actions }) {
           meta: { align: 'right' },
           cell: (c) => (
             <>
-              <Money value={c.getValue()} /> <span style={{ opacity: 0.7 }}>/ {c.row.original.purchaseUnit}</span>
+              <Money value={c.getValue()} />{' '}
+              <span style={{ opacity: 0.7 }}>/ {unitLabel(t, c.row.original.purchaseUnit)}</span>
             </>
           ),
         }),

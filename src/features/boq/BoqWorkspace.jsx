@@ -42,7 +42,7 @@ import { Money } from '@/shared/components/Money'
 
 import { useCurrentUser } from '@/shared/stores'
 import { can } from '@/shared/lib/permissions'
-import { formatDate, formatNumber } from '@/shared/lib/format'
+import { formatDate, formatNumber, unitLabel } from '@/shared/lib/format'
 import { ApiError } from '@/shared/api/client'
 import { FONT_MONO } from '@/shared/theme/theme'
 import {
@@ -134,7 +134,7 @@ export function BoqWorkspace({ project }) {
         helper.accessor('unit', {
           header: t('workspace.columns.unit'),
           enableSorting: false,
-          cell: (c) => <span style={{ fontFamily: FONT_MONO }}>{c.getValue()}</span>,
+          cell: (c) => <span style={{ fontFamily: FONT_MONO }}>{unitLabel(t, c.getValue())}</span>,
         }),
         helper.accessor('qty', {
           header: t('workspace.columns.qty'),

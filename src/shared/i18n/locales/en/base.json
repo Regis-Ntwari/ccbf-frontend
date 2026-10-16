@@ -153,5 +153,35 @@
     "describeChange": "Describe what changed",
     "gfaMin": "Minimum 20 m²",
     "gfaMax": "Maximum 50,000 m²"
+  },
+  "units": {
+    "each": "no.",
+    "sum": "sum",
+    "bag": "bag",
+    "day": "day",
+    "primeCost": "PC",
+    "piece": "pc",
+    "bar": "bar",
+    "box": "box",
+    "sheet": "sheet",
+    "hour": "hour"
+  },
+  "catalogue": {
+    "category": {
+      "Cement": "Cement",
+      "Aggregate": "Aggregate",
+      "Steel": "Steel",
+      "Masonry": "Masonry",
+      "Timber": "Timber",
+      "Roofing": "Roofing",
+      "Tiles": "Tiles",
+      "Paint": "Paint",
+      "Plumbing": "Plumbing",
+      "Electrical": "Electrical",
+      "Joinery": "Joinery",
+      "Glazing": "Glazing",
+      "Labour": "Labour",
+      "Plant": "Plant"
+    }
   }
 }

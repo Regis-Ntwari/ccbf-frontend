@@ -153,5 +153,35 @@
     "describeChange": "Sobanura icyahindutse",
     "gfaMin": "Ntiyagabanuka munsi ya 20 m²",
     "gfaMax": "Ntiyarenga 50 000 m²"
+  },
+  "units": {
+    "each": "umubare",
+    "sum": "igiteranyo",
+    "bag": "umufuka",
+    "day": "umunsi",
+    "primeCost": "PC",
+    "piece": "igice",
+    "bar": "umurongo",
+    "box": "agasanduku",
+    "sheet": "ibati",
+    "hour": "isaha"
+  },
+  "catalogue": {
+    "category": {
+      "Cement": "Sima",
+      "Aggregate": "Amabuye n’umucanga",
+      "Steel": "Ibyuma",
+      "Masonry": "Ubwubatsi bw’amatafari",
+      "Timber": "Imbaho",
+      "Roofing": "Igisenge",
+      "Tiles": "Amakaro",
+      "Paint": "Amarangi",
+      "Plumbing": "Imiyoboro y’amazi",
+      "Electrical": "Amashanyarazi",
+      "Joinery": "Ububaji",
+      "Glazing": "Ibirahure",
+      "Labour": "Abakozi",
+      "Plant": "Imashini"
+    }
   }
 }

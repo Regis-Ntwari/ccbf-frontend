@@ -86,3 +86,16 @@ languages, charcoal/graphite dark mode, offline support, install prompt, update 
 - Drawing viewer / takeoff, Excel import, IFC/Revit, supplier marketplace and financial feasibility (features 21–27) are out of scope for this iteration.
 - In mock mode, estimates live in the browser that computed them, so a shared `/estimate/$id` link opens with "Estimate not found" on another device. Against the real API the id resolves server-side (see ADR 0002).
 - Kinyarwanda and French translations cover navigation, landing, wizard and result pages; untranslated strings fall back to English.
+
+## Deploy (Vercel)
+The app is a static Vite build; `vercel.json` sets the framework, the SPA rewrite to `index.html` (everything except
+`/api/*` and `/assets/*`), long-lived caching for hashed assets and no-cache for the service worker. Import the repo in
+Vercel and keep the defaults (`npm run build`, output `dist`, Node 20 or newer). Environment variables:
+
+| Variable | Value until the backend exists |
+|---|---|
+| `VITE_API_MOCK` | `true` (in-browser mock; set to `false` once the API is live) |
+| `VITE_API_BASE_URL` | `/api` or the full URL of the backend |
+
+Do not add `manualChunks` to the Vite config: splitting vendor packages by hand produced a circular chunk graph and a
+blank page in production (ADR 0004 update, 2026-10-16).

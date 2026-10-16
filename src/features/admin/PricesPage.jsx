@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { categoryLabel } from '@/shared/lib/format'
 import { useTranslation } from 'react-i18next'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -79,7 +80,7 @@ export function PricesPage() {
           <MenuItem value="">{t('admin.prices.all')}</MenuItem>
           {MaterialCategorySchema.options.map((c) => (
             <MenuItem key={c} value={c}>
-              {c}
+              {categoryLabel(t, c)}
             </MenuItem>
           ))}
         </TextField>

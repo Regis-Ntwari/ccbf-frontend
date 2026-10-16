@@ -17,7 +17,7 @@ import { estimateQuery } from '@/features/estimate/api'
 import { boqQuery } from '@/features/boq/api'
 import { ErrorState, PageSkeleton } from '@/shared/components/States'
 import { Money } from '@/shared/components/Money'
-import { formatDate, formatMoney, formatNumber } from '@/shared/lib/format'
+import { formatDate, formatMoney, formatNumber, unitLabel } from '@/shared/lib/format'
 import { FONT_MONO } from '@/shared/theme/theme'
 
 function Row({ k, v }) {
@@ -229,7 +229,7 @@ export function ReportDocument({ project, type }) {
                         <TableRow key={it.id}>
                           <TableCell sx={{ fontFamily: FONT_MONO }}>{it.code}</TableCell>
                           <TableCell>{it.description}</TableCell>
-                          <TableCell sx={{ fontFamily: FONT_MONO }}>{it.unit}</TableCell>
+                          <TableCell sx={{ fontFamily: FONT_MONO }}>{unitLabel(t, it.unit)}</TableCell>
                           <TableCell align="right" sx={{ fontFamily: FONT_MONO }}>
                             {formatNumber(it.qty, i18n.language, 2)}
                           </TableCell>

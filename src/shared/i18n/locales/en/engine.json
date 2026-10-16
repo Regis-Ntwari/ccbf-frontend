@@ -120,42 +120,126 @@
           "description": "Site establishment, offices, stores, temporary utilities",
           "formula": "5 % of construction"
         },
-        "i2_01": { "description": "Strip topsoil 150 mm, stockpile", "formula": "footprint × 1.2" },
-        "i2_02": { "description": "Bulk cut/fill to level platform", "formula": "footprint × 0.25" },
-        "i3_01": { "description": "Excavate strip footing trenches to 1.2 m", "formula": "footing length × 0.6 × 1.2" },
-        "i3_02": { "description": "Blinding C15, 50 mm", "formula": "footing area" },
+        "i2_01": {
+          "description": "Strip topsoil 150 mm, stockpile",
+          "formula": "footprint × 1.2"
+        },
+        "i2_02": {
+          "description": "Bulk cut/fill to level platform",
+          "formula": "footprint × 0.25"
+        },
+        "i3_01": {
+          "description": "Excavate strip footing trenches to 1.2 m",
+          "formula": "footing length × 0.6 × 1.2"
+        },
+        "i3_02": {
+          "description": "Blinding C15, 50 mm",
+          "formula": "footing area"
+        },
         "i3_03": {
           "description": "RC strip footings C25 incl. formwork and reinforcement",
           "formula": "footing L × W × D"
         },
-        "i3_04": { "description": "Foundation walls, 200 mm hollow blocks to DPC", "formula": "perimeter × 0.9 m" },
-        "i3_05": { "description": "Hardcore 150 mm, DPM and 125 mm ground slab", "formula": "footprint" },
+        "i3_04": {
+          "description": "Foundation walls, 200 mm hollow blocks to DPC",
+          "formula": "perimeter × 0.9 m"
+        },
+        "i3_05": {
+          "description": "Hardcore 150 mm, DPM and 125 mm ground slab",
+          "formula": "footprint"
+        },
         "i4_01": {
           "description": "RC columns C25 incl. formwork and reinforcement",
           "formula": "count × size × height"
         },
-        "i4_02": { "description": "RC ring beams and lintels", "formula": "span grid" },
-        "i5_01": { "description": "External walls, 200 mm hollow blocks", "formula": "perimeter × height − openings" },
-        "i5_02": { "description": "Aluminium windows, single glazed, supply and fix", "formula": "window schedule" },
-        "i5_03": { "description": "External doors, solid core, supply and fix", "formula": "door schedule" },
-        "i6_01": { "description": "Timber roof trusses and purlins", "formula": "slope-adjusted roof area" },
-        "i6_02": { "description": "Pre-painted IT4 gauge 28 sheeting", "formula": "slope-adjusted roof area" },
-        "i6_03": { "description": "Gutters and downpipes, PVC", "formula": "eaves length" },
-        "i7_01": { "description": "Internal partitions, 150 mm hollow blocks", "formula": "net wall area" },
-        "i8_01": { "description": "Conduits, boxes and wiring rough-in", "formula": "points per room" },
-        "i8_02": { "description": "Water supply and drainage rough-in", "formula": "fixture points" },
-        "i9_01": { "description": "Internal plaster 15 mm, two coats", "formula": "wall areas both sides" },
-        "i9_02": { "description": "Floor screed 40 mm", "formula": "floor area" },
-        "i10_01": { "description": "Floor tiles, supply and lay", "formula": "floor area by room" },
-        "i10_02": { "description": "Emulsion paint, 1 undercoat + 2 coats", "formula": "plaster area" },
-        "i10_03": { "description": "Gypsum ceiling incl. framing", "formula": "ceiling area" },
-        "i11_01": { "description": "Internal flush doors incl. ironmongery", "formula": "rooms" },
-        "i11_02": { "description": "Fitted kitchen units (PC sum)", "formula": "allowance" },
-        "i12_01": { "description": "Sanitary fixtures, mid-range, supply and fix", "formula": "bathroom schedule" },
-        "i12_02": { "description": "Light fittings, switches and sockets", "formula": "points" },
-        "i13_01": { "description": "Paving and surface drainage", "formula": "external paved area" },
-        "i13_02": { "description": "Boundary wall 2.1 m incl. foundation", "formula": "plot perimeter" },
-        "i14_01": { "description": "Testing, commissioning, snagging, as-built docs", "formula": "1 % of construction" }
+        "i4_02": {
+          "description": "RC ring beams and lintels",
+          "formula": "span grid"
+        },
+        "i5_01": {
+          "description": "External walls, 200 mm hollow blocks",
+          "formula": "perimeter × height − openings"
+        },
+        "i5_02": {
+          "description": "Aluminium windows, single glazed, supply and fix",
+          "formula": "window schedule"
+        },
+        "i5_03": {
+          "description": "External doors, solid core, supply and fix",
+          "formula": "door schedule"
+        },
+        "i6_01": {
+          "description": "Timber roof trusses and purlins",
+          "formula": "slope-adjusted roof area"
+        },
+        "i6_02": {
+          "description": "Pre-painted IT4 gauge 28 sheeting",
+          "formula": "slope-adjusted roof area"
+        },
+        "i6_03": {
+          "description": "Gutters and downpipes, PVC",
+          "formula": "eaves length"
+        },
+        "i7_01": {
+          "description": "Internal partitions, 150 mm hollow blocks",
+          "formula": "net wall area"
+        },
+        "i8_01": {
+          "description": "Conduits, boxes and wiring rough-in",
+          "formula": "points per room"
+        },
+        "i8_02": {
+          "description": "Water supply and drainage rough-in",
+          "formula": "fixture points"
+        },
+        "i9_01": {
+          "description": "Internal plaster 15 mm, two coats",
+          "formula": "wall areas both sides"
+        },
+        "i9_02": {
+          "description": "Floor screed 40 mm",
+          "formula": "floor area"
+        },
+        "i10_01": {
+          "description": "Floor tiles, supply and lay",
+          "formula": "floor area by room"
+        },
+        "i10_02": {
+          "description": "Emulsion paint, 1 undercoat + 2 coats",
+          "formula": "plaster area"
+        },
+        "i10_03": {
+          "description": "Gypsum ceiling incl. framing",
+          "formula": "ceiling area"
+        },
+        "i11_01": {
+          "description": "Internal flush doors incl. ironmongery",
+          "formula": "rooms"
+        },
+        "i11_02": {
+          "description": "Fitted kitchen units (PC sum)",
+          "formula": "allowance"
+        },
+        "i12_01": {
+          "description": "Sanitary fixtures, mid-range, supply and fix",
+          "formula": "bathroom schedule"
+        },
+        "i12_02": {
+          "description": "Light fittings, switches and sockets",
+          "formula": "points"
+        },
+        "i13_01": {
+          "description": "Paving and surface drainage",
+          "formula": "external paved area"
+        },
+        "i13_02": {
+          "description": "Boundary wall 2.1 m incl. foundation",
+          "formula": "plot perimeter"
+        },
+        "i14_01": {
+          "description": "Testing, commissioning, snagging, as-built docs",
+          "formula": "1 % of construction"
+        }
       }
     },
     "export": {
@@ -227,6 +311,108 @@
         "kicukiro": "Promoted to Level 2 (preliminary estimate)",
         "rebar": "Price submitted: Rebar Y12 at 1,950 RWF/kg (flagged +50 %)",
         "musanze": "Kitchen quality set to Luxury"
+      }
+    },
+    "materials": {
+      "MAT-CEM-0001": {
+        "name": "Portland cement 42.5",
+        "spec": "50 kg bag",
+        "purchaseUnit": "bag"
+      },
+      "MAT-STL-0012": {
+        "name": "Rebar Y12",
+        "spec": "12 m bar",
+        "purchaseUnit": "bar"
+      },
+      "MAT-BLK-0003": {
+        "name": "Hollow block 150×200×400",
+        "spec": "pc",
+        "purchaseUnit": "pc"
+      },
+      "MAT-TIL-0020": {
+        "name": "Ceramic floor tile 40×40",
+        "spec": "m²",
+        "purchaseUnit": "box"
+      },
+      "MAT-TIL-0021": {
+        "name": "Porcelain 60×60",
+        "spec": "m²",
+        "purchaseUnit": "box"
+      },
+      "MAT-ROF-0005": {
+        "name": "Pre-painted IT4 gauge 28 sheet",
+        "spec": "m²",
+        "purchaseUnit": "sheet"
+      },
+      "MAT-GLZ-0007": {
+        "name": "Aluminium window, single glazed",
+        "spec": "m²",
+        "purchaseUnit": "m²"
+      },
+      "MAT-TIM-0009": {
+        "name": "Eucalyptus roof timber",
+        "spec": "m",
+        "purchaseUnit": "m"
+      },
+      "MAT-JOI-0011": {
+        "name": "Solid-core flush door incl. frame",
+        "spec": "no.",
+        "purchaseUnit": "no."
+      },
+      "MAT-PLB-0014": {
+        "name": "PVC pipe 110 mm",
+        "spec": "m",
+        "purchaseUnit": "length 6 m"
+      },
+      "MAT-ELE-0016": {
+        "name": "Cable 2.5 mm² twin + earth",
+        "spec": "m",
+        "purchaseUnit": "roll 100 m"
+      },
+      "MAT-PNT-0018": {
+        "name": "Emulsion paint, interior",
+        "spec": "l",
+        "purchaseUnit": "20 l"
+      },
+      "MAT-AGG-0002": {
+        "name": "Crushed stone 20 mm",
+        "spec": "m³",
+        "purchaseUnit": "truck 7 m³"
+      },
+      "MAT-SND-0004": {
+        "name": "River sand",
+        "spec": "m³",
+        "purchaseUnit": "truck 7 m³"
+      },
+      "LAB-MASON": {
+        "name": "Mason, skilled",
+        "spec": "day",
+        "purchaseUnit": "day"
+      },
+      "LAB-CARPENTER": {
+        "name": "Carpenter, skilled",
+        "spec": "day",
+        "purchaseUnit": "day"
+      },
+      "LAB-STEELFIXER": {
+        "name": "Steel fixer, skilled",
+        "spec": "day",
+        "purchaseUnit": "day"
+      },
+      "LAB-LABOURER": {
+        "name": "Labourer, unskilled",
+        "spec": "day",
+        "purchaseUnit": "day"
+      },
+      "LAB-ELECTRICIAN": {
+        "name": "Electrician, skilled",
+        "spec": "day",
+        "purchaseUnit": "day"
+      },
+      "PLT-EXCAVATOR": {
+        "name": "Excavator 20 t, hire",
+        "spec": "hour",
+        "purchaseUnit": "day"
       }
     }
   }

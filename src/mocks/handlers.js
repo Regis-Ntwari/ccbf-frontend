@@ -633,6 +633,17 @@ route('POST', '/projects/:id/boq/export', ({ headers, params, body }) => {
 })
 
 // Catalogue
+/** Catalogue text (name, spec, purchase unit) in the request language; unknown materials keep their stored text. */
+function localizePrice(p) {
+  const k = `engine.materials.${p.materialId}`
+  return {
+    ...p,
+    name: tr(`${k}.name`, { defaultValue: p.name }),
+    spec: tr(`${k}.spec`, { defaultValue: p.spec }),
+    purchaseUnit: tr(`${k}.purchaseUnit`, { defaultValue: p.purchaseUnit }),
+  }
+}
+
 route('GET', '/catalogue/prices', ({ headers, query }) => {
   const user = requireUser(headers)
   const status = query.get('status')
@@ -640,12 +651,14 @@ route('GET', '/catalogue/prices', ({ headers, query }) => {
   const q = (query.get('q') ?? '').toLowerCase()
   if (status && status !== 'approved' && user.role !== 'platform_admin')
     throw new HttpError(403, 'forbidden', tr('engine.errors.adminsOnly'))
-  return db.prices.filter(
-    (p) =>
-      (!status || p.status === status) &&
-      (!category || p.category === category) &&
-      (!q || p.name.toLowerCase().includes(q) || p.materialId.toLowerCase().includes(q)),
-  )
+  return db.prices
+    .map(localizePrice)
+    .filter(
+      (p) =>
+        (!status || p.status === status) &&
+        (!category || p.category === category) &&
+        (!q || p.name.toLowerCase().includes(q) || p.materialId.toLowerCase().includes(q)),
+    )
 })
 route('POST', '/catalogue/prices', ({ headers, body }) => {
   const user = requireUser(headers)
@@ -676,7 +689,7 @@ route('POST', '/catalogue/prices', ({ headers, body }) => {
     actor: user.name,
   })
   save()
-  return rec
+  return localizePrice(rec)
 })
 route('POST', '/catalogue/prices/:id/decision', ({ headers, params, body }) => {
   const user = requireUser(headers)

@@ -87,16 +87,10 @@ export default defineConfig({
   server: { port: 5173 },
   build: {
     sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules/@mui/x-charts')) return 'charts'
-          if (id.includes('node_modules/@mui/') || id.includes('node_modules/@emotion/')) return 'mui'
-          if (id.includes('node_modules/@tanstack/')) return 'tanstack'
-          if (id.includes('node_modules/react') || id.includes('node_modules/scheduler')) return 'react'
-          return undefined
-        },
-      },
-    },
+    // No manual vendor chunking: splitting node_modules by package created a circular
+    // dependency between chunks (the CommonJS interop helper ran before its chunk was
+    // initialised, blank screen in production). Routes are already code-split by the
+    // router plugin; Rollup shares the heavy libraries between them on its own.
+    chunkSizeWarningLimit: 900,
   },
 })

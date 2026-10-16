@@ -1,4 +1,5 @@
 import { useForm } from '@tanstack/react-form'
+import { unitLabel } from '@/shared/lib/format'
 import { useTranslation } from 'react-i18next'
 import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
@@ -70,7 +71,7 @@ export function OverrideDialog({ item, onClose, onSubmit, pending, error }) {
         <DialogTitle>{t('workspace.boq.overrideTitle', { code: item.code })}</DialogTitle>
         <DialogContent>
           <Typography color="text.secondary" sx={{ mb: 2 }}>
-            {item.description} · {item.unit}
+            {item.description} · {unitLabel(t, item.unit)}
           </Typography>
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
             {num('qty', t('workspace.boq.quantityUnit', { unit: item.unit }))}

@@ -120,13 +120,22 @@
           "description": "Gutegura urubuga, ibiro, ububiko, amazi n’umuriro by’agateganyo",
           "formula": "5 % by’ubwubatsi"
         },
-        "i2_01": { "description": "Gukuraho ubutaka bwo hejuru 150 mm, kububika", "formula": "ubuso bw’inzu × 1.2" },
-        "i2_02": { "description": "Gucukura/gusiba kugira ngo urubuga ruringanire", "formula": "ubuso bw’inzu × 0.25" },
+        "i2_01": {
+          "description": "Gukuraho ubutaka bwo hejuru 150 mm, kububika",
+          "formula": "ubuso bw’inzu × 1.2"
+        },
+        "i2_02": {
+          "description": "Gucukura/gusiba kugira ngo urubuga ruringanire",
+          "formula": "ubuso bw’inzu × 0.25"
+        },
         "i3_01": {
           "description": "Gucukura imyobo y’imisingi kugeza kuri 1.2 m",
           "formula": "uburebure bw’umusingi × 0.6 × 1.2"
         },
-        "i3_02": { "description": "Beto y’isuku C15, 50 mm", "formula": "ubuso bw’imisingi" },
+        "i3_02": {
+          "description": "Beto y’isuku C15, 50 mm",
+          "formula": "ubuso bw’imisingi"
+        },
         "i3_03": {
           "description": "Imisingi ya beto ikomeye C25 harimo ibibaho n’ibyuma",
           "formula": "umusingi L × W × D"
@@ -143,7 +152,10 @@
           "description": "Inkingi za beto ikomeye C25 harimo ibibaho n’ibyuma",
           "formula": "umubare × ingano × uburebure"
         },
-        "i4_02": { "description": "Imirongo ya beto n’ibisenge by’amadirishya", "formula": "intera z’inkingi" },
+        "i4_02": {
+          "description": "Imirongo ya beto n’ibisenge by’amadirishya",
+          "formula": "intera z’inkingi"
+        },
         "i5_01": {
           "description": "Inkuta zo hanze, amatafari y’umwobo 200 mm",
           "formula": "umuzenguruko × uburebure − imyanya"
@@ -152,7 +164,10 @@
           "description": "Amadirishya ya aluminiyumu, ikirahure kimwe, kugura no gushyiraho",
           "formula": "urutonde rw’amadirishya"
         },
-        "i5_03": { "description": "Inzugi zo hanze, zikomeye, kugura no gushyiraho", "formula": "urutonde rw’inzugi" },
+        "i5_03": {
+          "description": "Inzugi zo hanze, zikomeye, kugura no gushyiraho",
+          "formula": "urutonde rw’inzugi"
+        },
         "i6_01": {
           "description": "Imbaho z’igisenge n’imigozi y’imbaho",
           "formula": "ubuso bw’igisenge buhuje n’ubuhanamye"
@@ -161,15 +176,30 @@
           "description": "Amabati IT4 gauge 28 yasizwe irangi",
           "formula": "ubuso bw’igisenge buhuje n’ubuhanamye"
         },
-        "i6_03": { "description": "Imiyoboro y’amazi y’imvura, PVC", "formula": "uburebure bw’impande z’igisenge" },
-        "i7_01": { "description": "Inkuta zo mu nzu, amatafari y’umwobo 150 mm", "formula": "ubuso nyakuri bw’inkuta" },
-        "i8_01": { "description": "Imiyoboro, udusanduku n’insinga z’ibanze", "formula": "ingingo kuri buri cyumba" },
-        "i8_02": { "description": "Imiyoboro y’amazi n’iy’amazi mabi y’ibanze", "formula": "ingingo z’ibikoresho" },
+        "i6_03": {
+          "description": "Imiyoboro y’amazi y’imvura, PVC",
+          "formula": "uburebure bw’impande z’igisenge"
+        },
+        "i7_01": {
+          "description": "Inkuta zo mu nzu, amatafari y’umwobo 150 mm",
+          "formula": "ubuso nyakuri bw’inkuta"
+        },
+        "i8_01": {
+          "description": "Imiyoboro, udusanduku n’insinga z’ibanze",
+          "formula": "ingingo kuri buri cyumba"
+        },
+        "i8_02": {
+          "description": "Imiyoboro y’amazi n’iy’amazi mabi y’ibanze",
+          "formula": "ingingo z’ibikoresho"
+        },
         "i9_01": {
           "description": "Gusiga sima imbere 15 mm, inshuro ebyiri",
           "formula": "ubuso bw’inkuta impande zombi"
         },
-        "i9_02": { "description": "Sima yo hasi 40 mm", "formula": "ubuso bwo hasi" },
+        "i9_02": {
+          "description": "Sima yo hasi 40 mm",
+          "formula": "ubuso bwo hasi"
+        },
         "i10_01": {
           "description": "Amakaro yo hasi, kugura no gushyiraho",
           "formula": "ubuso bwo hasi kuri buri cyumba"
@@ -182,7 +212,10 @@
           "description": "Igisenge cyo mu nzu cya gypsum harimo imbaho zacyo",
           "formula": "ubuso bw’igisenge cyo mu nzu"
         },
-        "i11_01": { "description": "Inzugi zo mu nzu zisanzwe harimo ibyuma byazo", "formula": "ibyumba" },
+        "i11_01": {
+          "description": "Inzugi zo mu nzu zisanzwe harimo ibyuma byazo",
+          "formula": "ibyumba"
+        },
         "i11_02": {
           "description": "Ibikoresho by’igikoni byashyizweho (amafaranga ateganyijwe)",
           "formula": "amafaranga ateganyijwe"
@@ -191,9 +224,18 @@
           "description": "Ibikoresho by’isuku, ibihagati, kugura no gushyiraho",
           "formula": "urutonde rw’ubwiherero"
         },
-        "i12_02": { "description": "Amatara, udupfundikizo n’amasoketi", "formula": "ingingo" },
-        "i13_01": { "description": "Gukarura no gutunganya amazi yo hejuru", "formula": "ubuso bwakaruwe hanze" },
-        "i13_02": { "description": "Uruzitiro 2.1 m harimo umusingi", "formula": "umuzenguruko w’ikibanza" },
+        "i12_02": {
+          "description": "Amatara, udupfundikizo n’amasoketi",
+          "formula": "ingingo"
+        },
+        "i13_01": {
+          "description": "Gukarura no gutunganya amazi yo hejuru",
+          "formula": "ubuso bwakaruwe hanze"
+        },
+        "i13_02": {
+          "description": "Uruzitiro 2.1 m harimo umusingi",
+          "formula": "umuzenguruko w’ikibanza"
+        },
         "i14_01": {
           "description": "Kugerageza, gutangiza, gukosora utunenge, inyandiko z’uko byubatswe",
           "formula": "1 % by’ubwubatsi"
@@ -269,6 +311,108 @@
         "kicukiro": "Yazamuwe ku rwego rwa 2 (igereranya ry’ibanze)",
         "rebar": "Igiciro cyatanzwe: Ibyuma Y12 kuri 1,950 RWF/kg (cyaranzwe +50 %)",
         "musanze": "Ubwiza bw’igikoni bwashyizwe kuri Iy’akataraboneka"
+      }
+    },
+    "materials": {
+      "MAT-CEM-0001": {
+        "name": "Sima Portland 42.5",
+        "spec": "Umufuka wa kg 50",
+        "purchaseUnit": "umufuka"
+      },
+      "MAT-STL-0012": {
+        "name": "Icyuma cya beto Y12",
+        "spec": "Umurongo wa m 12",
+        "purchaseUnit": "umurongo"
+      },
+      "MAT-BLK-0003": {
+        "name": "Itafari ry’ubusa 150×200×400",
+        "spec": "igice",
+        "purchaseUnit": "igice"
+      },
+      "MAT-TIL-0020": {
+        "name": "Ikaro rya hasi 40×40",
+        "spec": "m²",
+        "purchaseUnit": "agasanduku"
+      },
+      "MAT-TIL-0021": {
+        "name": "Porselene 60×60",
+        "spec": "m²",
+        "purchaseUnit": "agasanduku"
+      },
+      "MAT-ROF-0005": {
+        "name": "Ibati IT4 risize irangi, gauge 28",
+        "spec": "m²",
+        "purchaseUnit": "ibati"
+      },
+      "MAT-GLZ-0007": {
+        "name": "Idirishya rya aluminiyumu, ikirahure kimwe",
+        "spec": "m²",
+        "purchaseUnit": "m²"
+      },
+      "MAT-TIM-0009": {
+        "name": "Imbaho z’inturusu zo ku gisenge",
+        "spec": "m",
+        "purchaseUnit": "m"
+      },
+      "MAT-JOI-0011": {
+        "name": "Urugi rukomeye hamwe n’ikadiri",
+        "spec": "umubare",
+        "purchaseUnit": "umubare"
+      },
+      "MAT-PLB-0014": {
+        "name": "Umuyoboro wa PVC 110 mm",
+        "spec": "m",
+        "purchaseUnit": "uburebure bwa m 6"
+      },
+      "MAT-ELE-0016": {
+        "name": "Insinga 2.5 mm² ebyiri + iy’ubutaka",
+        "spec": "m",
+        "purchaseUnit": "umuzingo wa m 100"
+      },
+      "MAT-PNT-0018": {
+        "name": "Irangi ryo mu nzu",
+        "spec": "l",
+        "purchaseUnit": "l 20"
+      },
+      "MAT-AGG-0002": {
+        "name": "Amabuye amenaguye 20 mm",
+        "spec": "m³",
+        "purchaseUnit": "ikamyo ya m³ 7"
+      },
+      "MAT-SND-0004": {
+        "name": "Umucanga w’uruzi",
+        "spec": "m³",
+        "purchaseUnit": "ikamyo ya m³ 7"
+      },
+      "LAB-MASON": {
+        "name": "Umufundi w’amatafari ubizi",
+        "spec": "umunsi",
+        "purchaseUnit": "umunsi"
+      },
+      "LAB-CARPENTER": {
+        "name": "Umubaji ubizi",
+        "spec": "umunsi",
+        "purchaseUnit": "umunsi"
+      },
+      "LAB-STEELFIXER": {
+        "name": "Umukozi w’ibyuma ubizi",
+        "spec": "umunsi",
+        "purchaseUnit": "umunsi"
+      },
+      "LAB-LABOURER": {
+        "name": "Umukozi usanzwe",
+        "spec": "umunsi",
+        "purchaseUnit": "umunsi"
+      },
+      "LAB-ELECTRICIAN": {
+        "name": "Umukanishi w’amashanyarazi ubizi",
+        "spec": "umunsi",
+        "purchaseUnit": "umunsi"
+      },
+      "PLT-EXCAVATOR": {
+        "name": "Imashini icukura (ekisikavateri) 20 t, gukodesha",
+        "spec": "isaha",
+        "purchaseUnit": "umunsi"
       }
     }
   }

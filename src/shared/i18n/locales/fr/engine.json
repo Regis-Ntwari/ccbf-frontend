@@ -120,13 +120,22 @@
           "description": "Installation de chantier, bureaux, magasins, réseaux provisoires",
           "formula": "5 % de la construction"
         },
-        "i2_01": { "description": "Décapage de terre végétale 150 mm, mise en dépôt", "formula": "emprise × 1,2" },
-        "i2_02": { "description": "Déblais/remblais en masse pour plateforme", "formula": "emprise × 0,25" },
+        "i2_01": {
+          "description": "Décapage de terre végétale 150 mm, mise en dépôt",
+          "formula": "emprise × 1,2"
+        },
+        "i2_02": {
+          "description": "Déblais/remblais en masse pour plateforme",
+          "formula": "emprise × 0,25"
+        },
         "i3_01": {
           "description": "Fouilles en rigole pour semelles filantes à 1,2 m",
           "formula": "longueur de semelle × 0,6 × 1,2"
         },
-        "i3_02": { "description": "Béton de propreté C15, 50 mm", "formula": "surface des semelles" },
+        "i3_02": {
+          "description": "Béton de propreté C15, 50 mm",
+          "formula": "surface des semelles"
+        },
         "i3_03": {
           "description": "Semelles filantes BA C25 y c. coffrage et armatures",
           "formula": "semelle L × l × P"
@@ -135,12 +144,18 @@
           "description": "Murs de soubassement, blocs creux 200 mm jusqu’à la coupure de capillarité",
           "formula": "périmètre × 0,9 m"
         },
-        "i3_05": { "description": "Hérisson 150 mm, film polyane et dallage 125 mm", "formula": "emprise" },
+        "i3_05": {
+          "description": "Hérisson 150 mm, film polyane et dallage 125 mm",
+          "formula": "emprise"
+        },
         "i4_01": {
           "description": "Poteaux BA C25 y c. coffrage et armatures",
           "formula": "nombre × section × hauteur"
         },
-        "i4_02": { "description": "Chaînages et linteaux BA", "formula": "trame des portées" },
+        "i4_02": {
+          "description": "Chaînages et linteaux BA",
+          "formula": "trame des portées"
+        },
         "i5_01": {
           "description": "Murs extérieurs, blocs creux 200 mm",
           "formula": "périmètre × hauteur − ouvertures"
@@ -161,27 +176,66 @@
           "description": "Tôles IT4 prépeintes, épaisseur 28",
           "formula": "surface de toiture corrigée de la pente"
         },
-        "i6_03": { "description": "Gouttières et descentes, PVC", "formula": "longueur d’égout" },
-        "i7_01": { "description": "Cloisons intérieures, blocs creux 150 mm", "formula": "surface nette de murs" },
-        "i8_01": { "description": "Fourreaux, boîtes et câblage en attente", "formula": "points par pièce" },
-        "i8_02": { "description": "Alimentation en eau et évacuations en attente", "formula": "points d’appareils" },
-        "i9_01": { "description": "Enduit intérieur 15 mm, deux couches", "formula": "surfaces de murs deux faces" },
-        "i9_02": { "description": "Chape de sol 40 mm", "formula": "surface de plancher" },
-        "i10_01": { "description": "Carrelage de sol, fourniture et pose", "formula": "surface de plancher par pièce" },
+        "i6_03": {
+          "description": "Gouttières et descentes, PVC",
+          "formula": "longueur d’égout"
+        },
+        "i7_01": {
+          "description": "Cloisons intérieures, blocs creux 150 mm",
+          "formula": "surface nette de murs"
+        },
+        "i8_01": {
+          "description": "Fourreaux, boîtes et câblage en attente",
+          "formula": "points par pièce"
+        },
+        "i8_02": {
+          "description": "Alimentation en eau et évacuations en attente",
+          "formula": "points d’appareils"
+        },
+        "i9_01": {
+          "description": "Enduit intérieur 15 mm, deux couches",
+          "formula": "surfaces de murs deux faces"
+        },
+        "i9_02": {
+          "description": "Chape de sol 40 mm",
+          "formula": "surface de plancher"
+        },
+        "i10_01": {
+          "description": "Carrelage de sol, fourniture et pose",
+          "formula": "surface de plancher par pièce"
+        },
         "i10_02": {
           "description": "Peinture émulsion, 1 couche d’impression + 2 couches",
           "formula": "surface d’enduit"
         },
-        "i10_03": { "description": "Plafond en plaques de plâtre y c. ossature", "formula": "surface de plafond" },
-        "i11_01": { "description": "Portes intérieures isoplanes y c. quincaillerie", "formula": "pièces" },
-        "i11_02": { "description": "Meubles de cuisine équipée (somme provisionnelle)", "formula": "provision" },
+        "i10_03": {
+          "description": "Plafond en plaques de plâtre y c. ossature",
+          "formula": "surface de plafond"
+        },
+        "i11_01": {
+          "description": "Portes intérieures isoplanes y c. quincaillerie",
+          "formula": "pièces"
+        },
+        "i11_02": {
+          "description": "Meubles de cuisine équipée (somme provisionnelle)",
+          "formula": "provision"
+        },
         "i12_01": {
           "description": "Appareils sanitaires, milieu de gamme, fourniture et pose",
           "formula": "nomenclature des salles de bains"
         },
-        "i12_02": { "description": "Luminaires, interrupteurs et prises", "formula": "points" },
-        "i13_01": { "description": "Pavage et drainage de surface", "formula": "surface pavée extérieure" },
-        "i13_02": { "description": "Clôture 2,1 m y c. fondation", "formula": "périmètre de la parcelle" },
+        "i12_02": {
+          "description": "Luminaires, interrupteurs et prises",
+          "formula": "points"
+        },
+        "i13_01": {
+          "description": "Pavage et drainage de surface",
+          "formula": "surface pavée extérieure"
+        },
+        "i13_02": {
+          "description": "Clôture 2,1 m y c. fondation",
+          "formula": "périmètre de la parcelle"
+        },
         "i14_01": {
           "description": "Essais, mise en service, levée des réserves, dossier des ouvrages exécutés",
           "formula": "1 % de la construction"
@@ -257,6 +311,108 @@
         "kicukiro": "Promu au niveau 2 (estimation préliminaire)",
         "rebar": "Prix soumis : Fer à béton Y12 à 1 950 RWF/kg (signalé +50 %)",
         "musanze": "Qualité de la cuisine définie sur Luxe"
+      }
+    },
+    "materials": {
+      "MAT-CEM-0001": {
+        "name": "Ciment Portland 42.5",
+        "spec": "Sac de 50 kg",
+        "purchaseUnit": "sac"
+      },
+      "MAT-STL-0012": {
+        "name": "Fer à béton Y12",
+        "spec": "Barre de 12 m",
+        "purchaseUnit": "barre"
+      },
+      "MAT-BLK-0003": {
+        "name": "Bloc creux 150×200×400",
+        "spec": "pièce",
+        "purchaseUnit": "pièce"
+      },
+      "MAT-TIL-0020": {
+        "name": "Carreau céramique de sol 40×40",
+        "spec": "m²",
+        "purchaseUnit": "boîte"
+      },
+      "MAT-TIL-0021": {
+        "name": "Grès cérame 60×60",
+        "spec": "m²",
+        "purchaseUnit": "boîte"
+      },
+      "MAT-ROF-0005": {
+        "name": "Tôle IT4 prépeinte, épaisseur 28",
+        "spec": "m²",
+        "purchaseUnit": "tôle"
+      },
+      "MAT-GLZ-0007": {
+        "name": "Fenêtre aluminium, simple vitrage",
+        "spec": "m²",
+        "purchaseUnit": "m²"
+      },
+      "MAT-TIM-0009": {
+        "name": "Bois de toiture en eucalyptus",
+        "spec": "m",
+        "purchaseUnit": "m"
+      },
+      "MAT-JOI-0011": {
+        "name": "Porte isoplane pleine avec cadre",
+        "spec": "u",
+        "purchaseUnit": "u"
+      },
+      "MAT-PLB-0014": {
+        "name": "Tuyau PVC 110 mm",
+        "spec": "m",
+        "purchaseUnit": "longueur de 6 m"
+      },
+      "MAT-ELE-0016": {
+        "name": "Câble 2,5 mm² double + terre",
+        "spec": "m",
+        "purchaseUnit": "rouleau de 100 m"
+      },
+      "MAT-PNT-0018": {
+        "name": "Peinture émulsion, intérieur",
+        "spec": "l",
+        "purchaseUnit": "20 l"
+      },
+      "MAT-AGG-0002": {
+        "name": "Pierre concassée 20 mm",
+        "spec": "m³",
+        "purchaseUnit": "camion de 7 m³"
+      },
+      "MAT-SND-0004": {
+        "name": "Sable de rivière",
+        "spec": "m³",
+        "purchaseUnit": "camion de 7 m³"
+      },
+      "LAB-MASON": {
+        "name": "Maçon qualifié",
+        "spec": "jour",
+        "purchaseUnit": "jour"
+      },
+      "LAB-CARPENTER": {
+        "name": "Charpentier qualifié",
+        "spec": "jour",
+        "purchaseUnit": "jour"
+      },
+      "LAB-STEELFIXER": {
+        "name": "Ferrailleur qualifié",
+        "spec": "jour",
+        "purchaseUnit": "jour"
+      },
+      "LAB-LABOURER": {
+        "name": "Manœuvre",
+        "spec": "jour",
+        "purchaseUnit": "jour"
+      },
+      "LAB-ELECTRICIAN": {
+        "name": "Électricien qualifié",
+        "spec": "jour",
+        "purchaseUnit": "jour"
+      },
+      "PLT-EXCAVATOR": {
+        "name": "Pelle mécanique 20 t, location",
+        "spec": "heure",
+        "purchaseUnit": "jour"
       }
     }
   }

@@ -28,3 +28,12 @@ and `typescript`, `typescript-eslint` and the `@types/*` packages were removed. 
 Query remains the single path for every API call, so swapping the in-browser mock for the real backend is a
 `VITE_API_MOCK=false` flip. Zod still validates every response at the boundary, which is what the static types used to
 protect. The TanStack Router and Query devtools were removed from the root route and from `devDependencies`.
+
+## Update (2026-10-16): no manual vendor chunking
+
+The first Vercel deployment showed a blank page. The production build split `node_modules` into `react`, `mui`,
+`tanstack` and `charts` chunks by hand (`build.rollupOptions.output.manualChunks`); the resulting chunk graph was
+circular, so the CommonJS interop helper used by the charts chunk ran before the chunk that defines it had initialised
+(`__commonJSMin is not a function`). Dev mode never bundles, which is why it only appeared in production. The manual
+chunking is removed; the router plugin's per-route code splitting plus Rollup's default sharing is sufficient.
+`vercel.json` adds the SPA rewrite and cache headers.
